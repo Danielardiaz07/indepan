@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>INDEPAN S.A.S</title>
+<meta name="description" content="Ingredientes, decoración, empaques y utensilios para panaderías, pastelerías y reposteros en Valledupar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   COLORES DE MARCA (tomados del logo): rojo · blanco · dorado
+   ============================================================ */
+:root{
+  --bg:#FFFFFF;
+  --surface:#FFFFFF;
+  --surface-2:#FBE9E7;      /* rojo muy suave, para franjas y fondos sutiles */
+  --ink:#271811;            /* café casi negro del contorno del logo */
+  --ink-2:#6A5547;
+  --line:#F6D9D5;           /* línea sutil con tinte rojo */
+  --brand:#CF3428;          /* rojo del delantal — color principal */
+  --brand-hover:#B42A20;
+  --brand-ink:#FFFFFF;
+  --brand-text:#CF3428;     /* rojo usado como color de texto/iconos */
+  --gold:#FFFFFF;           /* botón secundario: blanco con borde rojo */
+  --gold-hover:#FBE9E7;
+  --gold-ink:#CF3428;
+  --band:#CF3428;
+  --band-ink:#FFFFFF;
+  --foot:#FFFFFF;
+  --focus:#CF3428;
+  --shadow:0 1px 2px rgba(39,24,17,.06),0 10px 28px rgba(39,24,17,.08);
+  --font-display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+/* El sitio usa siempre el tema claro (fondo blanco), sin adaptarse al modo oscuro del dispositivo. */
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font-display);line-height:1.1;margin:0;letter-spacing:-.02em}
+p{margin:0}
+.container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,4vw,32px)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:8px}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+button{font-family:inherit}
+
+/* ---------- Botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;border:1.5px solid transparent;font:700 15px/1 var(--font-body);text-decoration:none;cursor:pointer;transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--brand);color:var(--brand-ink)}
+.btn-primary:hover{background:var(--brand-hover)}
+.btn-gold{background:var(--gold);color:var(--gold-ink);border-color:var(--brand)}
+.btn-gold:hover{background:var(--gold-hover)}
+.btn-sm{min-height:40px;padding:0 16px;font-size:14px}
+.btn-block{width:100%}
+.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none}
+.icon-btn{position:relative;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.badge-count{position:absolute;top:-6px;right:-6px;min-width:19px;height:19px;padding:0 4px;border-radius:999px;background:var(--brand);color:#FFF;font:700 11px/19px var(--font-body);text-align:center}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:10px;min-height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.brand-logo{width:50px;height:50px;flex:none;display:block}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-text strong{font-family:var(--font-display);font-size:24px;font-weight:700;letter-spacing:-.02em;color:var(--brand-text)}
+.brand-text small{font-size:12px;color:var(--ink-2);margin-top:3px;font-weight:500}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;color:var(--ink-2)}
+.nav a:hover{background:var(--surface-2);color:var(--ink)}
+.menu-btn{display:none}
+.bar-actions{display:flex;align-items:center;gap:8px}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--bg);padding-block:clamp(28px,5vw,64px)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(20px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(36px,5.2vw,60px);font-weight:700}
+.hero p.lead{margin-top:20px;font-size:clamp(16px,1.6vw,19px);color:var(--ink-2);max-width:50ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-art{display:grid;place-items:center}
+.hero-art img{width:min(100%,480px);height:auto;display:block;filter:drop-shadow(0 22px 24px rgba(39,24,17,.18))}
+
+/* ---------- Franja de categorías ---------- */
+.band{background:var(--band);color:var(--band-ink);--focus:#FFFFFF;padding-block:18px}
+.band-in{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.band-in p{font-weight:700;font-family:var(--font-display);font-size:18px}
+.band-chips{display:flex;flex-wrap:wrap;gap:8px}
+.band-chips button{min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.55);background:transparent;color:inherit;font:600 14.5px var(--font-body);cursor:pointer;transition:background-color .15s ease,color .15s ease}
+.band-chips button:hover{background:#FFFFFF;color:#9C231A}
+
+/* ---------- Secciones ---------- */
+.section{padding-block:clamp(48px,7vw,88px)}
+.section-head{max-width:640px;margin-bottom:32px}
+.section-head h2{font-size:clamp(28px,3.6vw,42px);font-weight:700}
+.section-head p{margin-top:12px;color:var(--ink-2);font-size:17px}
+
+/* ---------- Catálogo ---------- */
+.catalog{display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start}
+.catalog > *{min-width:0}
+.filters{position:sticky;top:calc(env(safe-area-inset-top,0px) + 92px);background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:22px}
+.filters h3{font-family:var(--font-body);font-size:14px;font-weight:700;letter-spacing:0;margin-bottom:10px}
+.search{position:relative}
+.search .ic{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--ink-2);pointer-events:none}
+.search input{width:100%;height:48px;padding:0 14px 0 42px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:500 15px var(--font-body)}
+.search input::placeholder{color:var(--ink-2);opacity:.85}
+.search input:focus{outline:none;border-color:var(--brand)}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;border-radius:12px;background:var(--surface-2)}
+.seg button{min-height:40px;border:0;border-radius:9px;background:transparent;color:var(--ink-2);font:600 13.5px var(--font-body);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(39,24,17,.16)}
+.cats{display:flex;flex-direction:column;gap:2px}
+.cat-btn{display:flex;align-items:center;gap:10px;width:100%;min-height:44px;padding:0 12px;border:0;border-radius:11px;background:transparent;color:var(--ink);font:500 14.5px var(--font-body);text-align:left;cursor:pointer}
+.cat-btn:hover{background:var(--surface-2)}
+.cat-btn .ic{color:var(--brand-text)}
+.cat-btn .n{margin-left:auto;font-size:12.5px;font-weight:700;color:var(--ink-2);background:var(--surface-2);padding:2px 9px;border-radius:999px}
+.cat-btn[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);font-weight:600}
+.cat-btn[aria-pressed="true"] .ic{color:var(--brand-ink)}
+.cat-btn[aria-pressed="true"] .n{background:rgba(255,255,255,.22);color:inherit}
+.results-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;min-height:36px}
+.results-bar p{color:var(--ink-2);font-size:15px}
+.results-bar strong{color:var(--ink)}
+.link-btn{border:0;background:none;color:var(--brand-text);font:700 14px var(--font-body);cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+
+/* --- Tarjeta de producto --- */
+.card{display:flex;flex-direction:column;gap:12px;background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:14px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--brand)}
+.tile{display:grid;place-items:center;aspect-ratio:16/10;border-radius:12px;background:var(--surface-2);color:var(--brand-text)}
+.tile .ic{width:40px;height:40px;stroke-width:1.5}
+.card .cat-label{font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.card h3{font-family:var(--font-body);font-size:16.5px;font-weight:700;line-height:1.3;margin-top:2px;letter-spacing:0}
+.card .pres{font-size:13px;color:var(--ink-2);margin-top:2px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.tag{font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink)}
+.card-body{flex:1;padding-inline:2px}
+.card-detail{display:none;font-size:13.5px;color:var(--ink-2);background:var(--surface-2);border-radius:12px;padding:10px 12px;margin-top:2px}
+.card-detail.open{display:block}
+.card-detail dl{display:grid;grid-template-columns:auto 1fr;gap:2px 8px;margin:0}
+.card-detail dt{font-weight:700;color:var(--ink)}
+.card-detail dd{margin:0}
+.card-toggle{align-self:flex-start;border:0;background:none;padding:2px 0;font:600 13px var(--font-body);color:var(--brand-text);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.card-actions{margin-top:auto;display:flex;gap:8px;align-items:center}
+.card-actions .btn{flex:1}
+.qty-stepper{display:flex;align-items:center;gap:0;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;flex:1}
+.qty-stepper button{width:38px;height:40px;border:0;background:var(--surface-2);color:var(--brand-text);font:700 18px/1 var(--font-body);cursor:pointer;display:grid;place-items:center}
+.qty-stepper span{flex:1;text-align:center;font-weight:700;font-size:14.5px}
+.empty{grid-column:1/-1;text-align:center;padding:48px 20px;border:1.5px dashed var(--line);border-radius:20px;color:var(--ink-2)}
+.empty h3{color:var(--ink);font-size:24px;margin-bottom:8px}
+.empty .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+
+/* ---------- Nosotros ---------- */
+.about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,6vw,80px);align-items:center}
+.about-grid .copy p{color:var(--ink-2);font-size:17px;margin-top:16px;max-width:52ch}
+.values{display:grid}
+.value{display:flex;gap:16px;padding-block:20px;border-top:1.5px solid var(--line)}
+.value:last-child{border-bottom:1.5px solid var(--line)}
+.value .badge{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);color:var(--brand-text);flex:none}
+.value h3{font-family:var(--font-body);font-size:17px;font-weight:700;letter-spacing:0}
+.value p{color:var(--ink-2);font-size:15px;margin-top:4px}
+
+/* ---------- Contacto ---------- */
+.contact{background:var(--band);color:var(--band-ink);--focus:#FFFFFF}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,6vw,72px);align-items:center}
+.contact h2{font-size:clamp(28px,3.6vw,42px);font-weight:700}
+.contact .copy p{margin-top:14px;font-size:17px;opacity:.92;max-width:44ch}
+.contact .copy .btn{margin-top:26px}
+.panel{background:var(--surface);color:var(--ink);border-radius:22px;padding:8px 24px;box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.row-item{display:flex;align-items:center;gap:16px;padding-block:18px;text-decoration:none}
+.row-item + .row-item{border-top:1.5px solid var(--line)}
+.row-item .badge{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);color:var(--brand-text);flex:none}
+.row-item small{display:block;font-size:13px;font-weight:600;color:var(--ink-2)}
+.row-item .v{font-weight:700;overflow-wrap:anywhere}
+a.row-item:hover .v{color:var(--brand-text)}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--foot);color:var(--ink-2);padding-block:28px;font-size:14px;border-top:2px solid var(--brand)}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+.foot-brand{display:flex;align-items:center;gap:12px}
+.foot-brand img{width:44px;height:44px;display:block}
+.foot-brand strong{font-family:var(--font-display);font-size:19px;color:var(--brand-text)}
+
+/* ---------- Botón flotante del pedido ---------- */
+.cart-fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:none;align-items:center;gap:10px;min-height:52px;padding:0 20px 0 18px;border-radius:999px;border:0;background:var(--brand);color:#FFF;font:700 15px var(--font-body);cursor:pointer;box-shadow:0 10px 24px rgba(39,24,17,.28)}
+.cart-fab.show{display:inline-flex}
+.cart-fab .n{background:#FFF;color:var(--brand);min-width:22px;height:22px;border-radius:999px;font:800 12.5px/22px var(--font-body);text-align:center;padding:0 5px}
+
+/* ---------- Carrito / pedido ---------- */
+.cart-overlay{position:fixed;inset:0;background:rgba(39,24,17,.45);z-index:70;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.cart-overlay.open{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--surface);z-index:71;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .22s ease;box-shadow:-8px 0 30px rgba(0,0,0,.18)}
+.cart-drawer.open{transform:translateX(0)}
+.cart-head{display:flex;align-items:center;gap:12px;padding:calc(16px + env(safe-area-inset-top,0px)) 18px 14px;border-bottom:1.5px solid var(--line)}
+.cart-head h2{font-size:20px;font-weight:700;margin-right:auto}
+.cart-date{padding:10px 18px;font-size:13px;color:var(--ink-2);border-bottom:1px solid var(--line)}
+.cart-items{flex:1;overflow-y:auto;padding:10px 18px}
+.cart-empty{text-align:center;color:var(--ink-2);padding:40px 10px}
+.cart-empty .ic{width:40px;height:40px;margin:0 auto 12px;color:var(--line)}
+.cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cart-item .icowrap{width:46px;height:46px;border-radius:12px;background:var(--surface-2);color:var(--brand-text);display:grid;place-items:center;flex:none}
+.cart-item .info{flex:1;min-width:0}
+.cart-item h4{font-size:14.5px;font-weight:700;line-height:1.3}
+.cart-item .pres{font-size:12.5px;color:var(--ink-2);margin-top:2px}
+.cart-item .row{display:flex;align-items:center;gap:10px;margin-top:8px}
+.cart-item .qty-stepper{flex:none;width:auto}
+.cart-item .remove{border:0;background:none;color:var(--ink-2);cursor:pointer;padding:6px;border-radius:8px}
+.cart-item .remove:hover{color:var(--brand);background:var(--surface-2)}
+.cart-foot{border-top:1.5px solid var(--line);padding:14px 18px calc(16px + env(safe-area-inset-bottom,0px))}
+.cart-foot label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.cart-foot textarea{width:100%;min-height:64px;resize:vertical;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;font:500 14px var(--font-body);color:var(--ink);background:var(--bg)}
+.cart-foot textarea:focus{outline:none;border-color:var(--brand)}
+.cart-summary{display:flex;justify-content:space-between;align-items:center;margin:12px 0;font-weight:700}
+.cart-summary small{display:block;font-weight:500;color:var(--ink-2);font-size:12.5px;margin-top:2px}
+.cart-clear{display:block;text-align:center;margin-top:10px;font-size:13px;color:var(--ink-2);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .catalog{grid-template-columns:1fr;gap:20px}
+  .filters{position:static;padding:16px}
+  .cats{flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:6px;margin-inline:-4px;padding-inline:4px;scrollbar-width:thin}
+  .cat-btn{width:auto;white-space:nowrap;border:1.5px solid var(--line);border-radius:999px;padding:0 14px}
+  .cat-btn .ic{display:none}
+}
+@media (max-width:820px){
+  .menu-btn{display:inline-grid}
+  .bar .btn.hide-sm{display:none}
+  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px clamp(16px,4vw,32px) 16px;display:none}
+  .nav.open{display:flex}
+  .nav a{padding:14px 12px;border-radius:10px;font-size:16px}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-art{order:-1}
+  .hero-art img{width:min(70%,300px)}
+  .cart-drawer{width:100%}
+}
+@media (max-width:520px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .card{padding:10px}
+  .brand-text small{display:none}
+  .panel{padding-inline:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+}
+/* ================= NOVEDADES ================= */
+.tile{position:relative}
+.new-badge{position:absolute;top:10px;left:10px;display:inline-flex;align-items:center;gap:5px;padding:4px 10px 4px 8px;border-radius:999px;background:#E0A93B;color:#271811;font:700 12.5px var(--font-body)}
+.new-badge .ic{width:14px;height:14px;fill:currentColor;stroke:none}
+.card.is-new{border-color:#E0A93B}
+.cat-new .ic{color:#C98E1C}
+.band-chips .chip-new{background:#E0A93B;border-color:#E0A93B;color:#271811}
+.band-chips .chip-new:hover{background:#F0BD55}
+/* ================= PRECIOS ================= */
+.card .price{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--brand-text);margin-top:6px;letter-spacing:-.01em}
+.card .price small{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--ink-2)}
+.card .price.ask{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--ink-2)}
+.cart-item .pres strong{color:var(--ink)}
+.cart-total{display:flex;align-items:baseline;gap:8px;font-weight:600}
+.cart-total strong{font-family:var(--font-display);font-size:20px;color:var(--brand-text)}
+.cart-note{font-size:12.5px;color:var(--ink-2);margin:4px 0 0}
+.more-wrap{display:flex;justify-content:center;margin-top:24px}
+#more[hidden]{display:none}
+/* ================= CARRUSEL DE NOVEDADES ================= */
+.ip-slider{
+  --rojo:var(--brand,#CF3428);
+  --rojo-osc:#8E1420;
+  --dorado:#E0A93B;
+  --corteza:var(--ink,#271811);
+  --harina:#FFF8EE;
+  --blanco:#FFFFFF;
+  position:relative;
+  max-width:1200px;
+  margin:0 auto;
+  border-radius:18px;
+  overflow:hidden;
+  background:var(--corteza);
+  font-family:var(--font-body);
+  color:var(--blanco);
+}
+.ip-track{display:flex;transition:transform .6s cubic-bezier(.65,0,.35,1)}
+.ip-slide{
+  flex:0 0 100%;
+  display:grid;
+  grid-template-columns:minmax(0,5fr) minmax(0,6fr);
+  min-height:500px;
+}
+.ip-text{
+  position:relative;
+  display:flex;flex-direction:column;justify-content:center;
+  gap:18px;
+  padding:48px 56px 72px;
+  background:var(--panel,var(--rojo));
+  color:var(--tinta,var(--blanco));
+}
+/* franja dorada entre texto e imagen: el detalle de marca */
+.ip-text::after{
+  content:"";position:absolute;top:0;right:0;bottom:0;width:6px;
+  background:var(--dorado);
+}
+.ip-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:700;font-size:.95rem;color:var(--acento,var(--dorado));
+}
+.ip-kicker::before{content:"";width:28px;height:3px;background:currentColor;border-radius:2px}
+.ip-title{
+  margin:0;
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:clamp(2rem,4vw,3.2rem);
+  line-height:1.02;
+  letter-spacing:-.01em;
+}
+.ip-desc{margin:0;font-size:1.06rem;line-height:1.55;max-width:38ch;opacity:.92}
+.ip-facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.ip-facts li{
+  padding:6px 12px;border-radius:999px;font-size:.9rem;font-weight:600;
+  border:1.5px solid var(--acento,var(--dorado));
+}
+.ip-cta{
+  border:0;cursor:pointer;font-family:inherit;
+  align-self:flex-start;
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:6px;padding:14px 22px;border-radius:10px;
+  background:var(--dorado);color:var(--corteza);
+  font-weight:700;font-size:1rem;text-decoration:none;
+  transition:transform .2s ease,background .2s ease;
+}
+.ip-cta:hover{background:#F0BD55;transform:translateY(-2px)}
+.ip-cta svg{width:20px;height:20px}
+.ip-media{position:relative;background:var(--fondo-img,var(--corteza));overflow:hidden}
+.ip-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ip-media.contain img{object-fit:contain;padding:18px;box-sizing:border-box}
+
+/* Controles */
+.ip-arrow{
+  position:absolute;bottom:18px;
+  width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;
+  display:grid;place-items:center;
+  background:rgba(255,255,255,.92);color:var(--corteza);
+  box-shadow:0 4px 14px rgba(0,0,0,.25);
+  transition:background .2s;
+}
+.ip-arrow:hover{background:var(--blanco)}
+.ip-arrow svg{width:22px;height:22px}
+.ip-prev{right:74px}.ip-next{right:18px}
+.ip-dots{
+  position:absolute;left:56px;bottom:26px;display:flex;gap:8px;
+}
+.ip-dot{
+  width:12px;height:12px;border-radius:999px;border:0;padding:0;cursor:pointer;
+  background:rgba(255,255,255,.6);box-shadow:0 0 0 1px rgba(42,24,16,.35);transition:width .3s,background .3s;
+}
+.ip-dot[aria-current="true"]{width:34px;background:var(--dorado);box-shadow:none}
+.ip-slider :focus-visible{outline:3px solid var(--dorado);outline-offset:3px}
+
+/* Móvil: imagen arriba, texto abajo */
+@media (max-width:760px){
+  .ip-slider{border-radius:0}
+  .ip-slide{grid-template-columns:1fr;grid-template-rows:280px auto;min-height:0}
+  .ip-media{order:-1}
+  .ip-text{padding:28px 22px 60px}
+  .ip-text::after{top:0;left:0;right:0;bottom:auto;width:auto;height:5px}
+  .ip-dots{left:22px;bottom:22px}
+  .ip-arrow{bottom:auto;top:120px;width:40px;height:40px}
+  .ip-prev{right:auto;left:12px}.ip-next{right:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .ip-track,.ip-cta,.ip-dot{transition:none}
+}
+.novedades{padding-block:clamp(24px,4vw,48px) 0}
+@media (max-width:760px){.novedades .container{padding-inline:0}}
+</style>
+</head>
+<body>
+
+<!-- Iconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-sack" viewBox="0 0 24 24"><path d="M8 3h8l-1.2 3.2c2.6 1.4 4.2 4 4.2 7 0 4.4-3.1 7.8-7 7.8s-7-3.4-7-7.8c0-3 1.6-5.6 4.2-7z"/><path d="M8.8 6.2h6.4"/></symbol>
+    <symbol id="i-jar" viewBox="0 0 24 24"><path d="M8 3h8M9 3v3M15 3v3"/><rect x="6" y="6" width="12" height="15" rx="3"/><path d="M6 12h12"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3c3.5 4.2 6 7.2 6 10.4A6 6 0 0 1 6 13.4C6 10.2 8.5 7.2 12 3z"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="i-choc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M5 9h14M5 15h14M12 3v18"/></symbol>
+    <symbol id="i-cream" viewBox="0 0 24 24"><path d="M5 10h14l-1.5 9a2 2 0 0 1-2 1.7h-7a2 2 0 0 1-2-1.7z"/><path d="M6 10c0-2.6 2.7-4.2 6-4.2s6 1.6 6 4.2"/><path d="M12 5.8V3"/></symbol>
+    <symbol id="i-bottle" viewBox="0 0 24 24"><path d="M10 3h4v4l2 3v9a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-9l2-3z"/><path d="M8 13h8"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M18.5 15.5l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></symbol>
+    <symbol id="i-nut" viewBox="0 0 24 24"><path d="M12 3c4.5 3 6.5 7 6.5 10.5A6.5 6.5 0 0 1 12 20a6.5 6.5 0 0 1-6.5-6.5C5.5 10 7.5 6 12 3z"/><path d="M12 8v8"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M4 9h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M3 5h18v4H3zM10 13h4"/></symbol>
+    <symbol id="i-pin-tool" viewBox="0 0 24 24"><rect x="7" y="9" width="10" height="6" rx="1.5"/><path d="M3 12h4M17 12h4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.3 18.7z"/><path d="M9.2 8.8c.2 2.6 2.4 4.9 5 5.1l1-1.3-1.9-1-.8.6c-.7-.3-1.5-1.1-1.8-1.8l.6-.8-1-1.9z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s6.5-5.7 6.5-11A6.5 6.5 0 0 0 5.5 10c0 5.3 6.5 11 6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.3" r=".6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19c.5-3.2 2.7-5 5.5-5s5 1.8 5.5 5"/><path d="M16 5.5a3 3 0 0 1 0 6M17.5 14.2c2 .5 3.2 2.2 3.5 4.8"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3.5l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 9-4.5M3 16.5l9 4.5 9-4.5"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.4l2.1 11.1a2 2 0 0 0 2 1.6h8.3a2 2 0 0 0 2-1.6L21 7.5H6.2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V7M6 7l1 13a2 2 0 0 0 2 1.8h6a2 2 0 0 0 2-1.8l1-13"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="#inicio" aria-label="Indepan, ir al inicio">
+      <img class="brand-logo" src="logo-icono.webp" width="50" height="50" alt="">
+      <span class="brand-text"><strong>Indepan</strong><small>Insumos de panadería y repostería</small></span>
+    </a>
+    <nav id="nav" class="nav" aria-label="Principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="bar-actions">
+      <button class="icon-btn" id="cartBtn" aria-label="Ver mi pedido" aria-haspopup="dialog">
+        <svg class="ic" aria-hidden="true"><use href="#i-cart"/></svg>
+        <span class="badge-count" id="cartBadge" hidden>0</span>
+      </button>
+      <a class="btn btn-gold btn-sm hide-sm" data-wa target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <h1>Todo para tu panadería y repostería, en un solo lugar</h1>
+        <p class="lead">Ingredientes, decoración, empaques y utensilios para panaderías, pastelerías y reposteros de Valledupar. Arma tu pedido y lo enviamos directo por WhatsApp.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#catalogo">Ver productos</a>
+          <a class="btn btn-gold" data-wa target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="logo.webp" width="760" height="760" alt="Logo de Indepan: un panadero con gorro y bigote sostiene una dona y un pan">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FRANJA DE CATEGORÍAS ================= -->
+  <section class="band" aria-label="Categorías destacadas">
+    <div class="container band-in">
+      <p>Explora por categoría</p>
+      <div class="band-chips">
+        <button type="button" data-go-cat="nuevos" class="chip-new">★ Novedades</button>
+        <button type="button" data-go-cat="harinas">Harinas</button>
+        <button type="button" data-go-cat="chocolates">Chocolates</button>
+        <button type="button" data-go-cat="rellenos">Rellenos</button>
+        <button type="button" data-go-cat="decoracion">Decoración</button>
+        <button type="button" data-go-cat="empaques">Empaques</button>
+        <button type="button" data-go-cat="utensilios">Utensilios</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CATÁLOGO ================= -->
+  <!-- ================= CARRUSEL DE NOVEDADES ================= -->
+  <section class="novedades" aria-label="Novedades">
+    <div class="container">
+<section class="ip-slider" aria-roledescription="carrusel" aria-label="Novedades de Indepan">
+  <div class="ip-track">
+
+    <!-- Slide 1: Talleres -->
+    <article class="ip-slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 3">
+      <div class="ip-text">
+        <span class="ip-kicker">Talleres en la tienda</span>
+        <h3 class="ip-title">Aprende con maestros panaderos</h3>
+        <p class="ip-desc">Hacemos demostraciones en vivo de panadería y repostería con los productos que vendemos. Ven, pregunta y prueba.</p>
+        <a class="ip-cta" href="https://wa.me/573006739631?text=Hola%20Indepan%2C%20quiero%20saber%20cu%C3%A1ndo%20es%20el%20pr%C3%B3ximo%20taller" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+          Preguntar por el próximo taller
+        </a>
+      </div>
+      <div class="ip-media">
+        <img src="img/taller.jpg" alt="Dos maestros panaderos hacen una demostración de repostería frente a un grupo de asistentes en Indepan">
+      </div>
+    </article>
+
+    <!-- Slide 2: Rodillos -->
+    <article class="ip-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 3"
+      style="--panel:#271811;--fondo-img:#140C08">
+      <div class="ip-text">
+        <span class="ip-kicker">Utensilios</span>
+        <h3 class="ip-title">Rodillos profesionales</h3>
+        <p class="ip-desc">Superficie lisa que no absorbe olores ni sabores. Para masas, hojaldres, fondant, pizza y galletas.</p>
+        <ul class="ip-facts" aria-label="Medidas disponibles">
+          <li>23 cm</li><li>37 cm</li><li>47 cm</li><li>Diámetro 2 o 3 cm</li>
+        </ul>
+        <button class="ip-cta" type="button" data-go-q="rodillo profesional">Ver rodillos y precios</button>
+      </div>
+      <div class="ip-media contain">
+        <img src="img/rodillos.jpg" alt="Afiche de rodillos profesionales Indepan disponibles en 6 medidas">
+      </div>
+    </article>
+
+    <!-- Slide 3: Vitina Hojaldre -->
+    <article class="ip-slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 3"
+      style="--panel:#FFF8EE;--tinta:#271811;--acento:#CF3428;--fondo-img:#F6E9D6">
+      <div class="ip-text">
+        <span class="ip-kicker">Margarinas</span>
+        <h3 class="ip-title">Vitina Hojaldre</h3>
+        <p class="ip-desc">Margarina para panes hojaldrados: capas delgadas y definidas, textura crujiente y buen sabor.</p>
+        <ul class="ip-facts" aria-label="Presentaciones">
+          <li>Barra 2,5 kg</li><li>Caja 15 kg</li>
+        </ul>
+        <a class="ip-cta" href="https://wa.me/573006739631?text=Hola%20Indepan%2C%20quiero%20pedir%20Vitina%20Hojaldre" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+      <div class="ip-media contain">
+        <img src="img/vitina.jpg" alt="Afiche de Vitina Hojaldre en caja de 15 kg y barra de 2,5 kg junto a croissants">
+      </div>
+    </article>
+
+  </div>
+
+  <button class="ip-arrow ip-prev" type="button" aria-label="Anterior">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="ip-arrow ip-next" type="button" aria-label="Siguiente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="ip-dots" role="group" aria-label="Elegir diapositiva"></div>
+</section>
+    </div>
+  </section>
+
+  <section class="section" id="catalogo">
+    <div class="container">
+      <div class="section-head">
+        <h2>Encuentra lo que necesitas</h2>
+        <p>Filtra por categoría o busca por nombre. Agrega los productos que necesitas y al final envías el pedido completo por WhatsApp.</p>
+      </div>
+
+      <div class="catalog">
+        <aside class="filters" aria-label="Filtros del catálogo">
+          <div>
+            <h3>Buscar producto</h3>
+            <div class="search">
+              <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+              <label class="sr-only" for="q">Buscar producto</label>
+              <input id="q" type="search" placeholder="Ej. harina, chocolate…" autocomplete="off">
+            </div>
+          </div>
+          <div>
+            <h3>Ideal para</h3>
+            <div class="seg" id="usos" role="group" aria-label="Filtrar por uso">
+              <button type="button" data-uso="todos" aria-pressed="true">Todo</button>
+              <button type="button" data-uso="P" aria-pressed="false">Panadería</button>
+              <button type="button" data-uso="R" aria-pressed="false">Repostería</button>
+            </div>
+          </div>
+          <div>
+            <h3>Categorías</h3>
+            <div class="cats" id="cats" role="group" aria-label="Filtrar por categoría"></div>
+          </div>
+        </aside>
+
+        <div>
+          <div class="results-bar">
+            <p id="count" aria-live="polite"></p>
+            <button class="link-btn" id="clear" type="button" hidden>Limpiar filtros</button>
+          </div>
+          <div class="grid" id="grid"></div>
+          <div class="more-wrap"><button class="btn btn-gold" id="more" type="button" hidden>Ver más productos</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOSOTROS ================= -->
+  <section class="section about" id="nosotros">
+    <div class="container about-grid">
+      <div class="copy">
+        <div class="section-head" style="margin-bottom:0">
+          <h2>Somos Indepan</h2>
+        </div>
+        <p>Distribuimos ingredientes y decoraciones para panadería y repostería en Valledupar. Acompañamos a panaderos, pasteleros y emprendedores con los insumos que necesitan para sacar adelante su producción.</p>
+        <p>Si no encuentras algo en el catálogo, pregúntanos y te ayudamos a conseguirlo.</p>
+      </div>
+      <div class="values">
+        <div class="value">
+          <div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg></div>
+          <div><h3>Variedad en un solo lugar</h3><p>Desde harinas y levaduras hasta decoración, empaques y utensilios.</p></div>
+        </div>
+        <div class="value">
+          <div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></div>
+          <div><h3>Para cada tipo de cliente</h3><p>Panaderías, pastelerías, reposteros y quienes están empezando.</p></div>
+        </div>
+        <div class="value">
+          <div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></div>
+          <div><h3>Atención cercana</h3><p>Arma tu pedido aquí y lo confirmamos directo por WhatsApp.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section class="section contact" id="contacto">
+    <div class="container contact-grid">
+      <div class="copy">
+        <h2>¿Hablamos de tu pedido?</h2>
+        <p>Cuéntanos qué necesitas y te respondemos. También puedes visitarnos o escribirnos por Instagram.</p>
+        <a class="btn btn-gold" data-wa target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+      </div>
+      <div class="panel">
+        <a class="row-item" data-wa target="_blank" rel="noopener">
+          <div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg></div>
+          <div><small>WhatsApp</small><span class="v" id="c-wa"></span></div>
+        </a>
+        <div class="row-item">
+          <div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></div>
+          <div><small>Dirección</small><span class="v" id="c-dir"></span></div>
+        </div>
+        <div class="row-item">
+          <div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></div>
+          <div><small>Horario</small><span class="v" id="c-hor"></span></div>
+        </div>
+        <a class="row-item" id="c-ig" target="_blank" rel="noopener">
+          <div class="badge"><svg class="ic" aria-hidden="true"><use href="#i-insta"/></svg></div>
+          <div><small>Instagram</small><span class="v" id="c-ig-t"></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container foot">
+    <div class="foot-brand">
+      <img src="logo-icono.webp" width="44" height="44" alt="">
+      <div><strong>Indepan</strong><div>Insumos de panadería y repostería · Valledupar</div></div>
+    </div>
+    <span>© <span id="year"></span> Indepan</span>
+  </div>
+</footer>
+
+<!-- ================= BOTÓN FLOTANTE DEL PEDIDO ================= -->
+<button class="cart-fab" id="cartFab" type="button">
+  <svg class="ic" aria-hidden="true"><use href="#i-cart"/></svg>
+  Ver mi pedido
+  <span class="n" id="cartFabN">0</span>
+</button>
+
+<!-- ================= CARRITO / PEDIDO ================= -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Mi pedido">
+  <div class="cart-head">
+    <h2>Mi pedido</h2>
+    <button class="icon-btn" id="cartClose" aria-label="Cerrar"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="cart-date" id="cartDate"></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <label for="cartNotes">Dirección y notas para la entrega (opcional)</label>
+    <textarea id="cartNotes" placeholder="Ej. Calle 5 #10-20, barrio Los Alpes. Entregar en la tarde."></textarea>
+    <div class="cart-summary">
+      <span id="cartCount">0 productos</span>
+      <span class="cart-total">Total estimado <strong id="cartTotal">$ 0</strong></span>
+    </div>
+    <p class="cart-note" id="cartTotalNote" hidden>Algunos productos se cotizan al confirmar el pedido (a granel o con precio a consultar).</p>
+    <p class="cart-note">Los precios pueden cambiar; Indepan confirma el valor final por WhatsApp.</p>
+    <button class="btn btn-primary btn-block" id="cartSend" type="button">
+      <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
+      Enviar pedido por WhatsApp
+    </button>
+    <button class="cart-clear" id="cartClear" type="button">Vaciar pedido</button>
+  </div>
+</aside>
+
+<script>
+/* ============================================================
+   DATOS DEL NEGOCIO — edita aquí
+   ============================================================ */
+const NEGOCIO = {
+  whatsapp: "573006739631",            // número con código de país, sin + ni espacios
+  whatsappVisible: "300 673 9631",
+  direccion: "Calle 21 #17-39, Mercado, Valledupar, Cesar",
+  horario: ["Lunes a viernes: 6:30 a. m. a 4:00 p. m.", "Sábados: 6:30 a. m. a 2:00 p. m."],
+  instagram: "insumosindepan"
+};
+
+/* Categorías del catálogo */
+const CATS = [
+  { id: "harinas",     nombre: "Harinas y almidones",      icon: "i-sack" },
+  { id: "levaduras",   nombre: "Levaduras y aditivos",     icon: "i-jar" },
+  { id: "grasas",      nombre: "Grasas y aceites",         icon: "i-drop" },
+  { id: "azucares",    nombre: "Azúcares y endulzantes",   icon: "i-cube" },
+  { id: "chocolates",  nombre: "Chocolates y coberturas",  icon: "i-choc" },
+  { id: "rellenos",    nombre: "Rellenos, cremas y lácteos", icon: "i-cream" },
+  { id: "esencias",    nombre: "Esencias, colores y sabores", icon: "i-bottle" },
+  { id: "decoracion",  nombre: "Decoración y toppings",    icon: "i-sparkle" },
+  { id: "frutos",      nombre: "Frutos secos y frutas",    icon: "i-nut" },
+  { id: "empaques",    nombre: "Empaques y desechables",   icon: "i-box" },
+  { id: "utensilios",  nombre: "Utensilios, moldes y dotación", icon: "i-pin-tool" }
+];
+
+/* Productos — listado de precios del 30 de septiembre de 2026 (971 productos).
+   n: nombre · c: categoría · u: uso (P/R/PR) · ref: código del producto · precio: precio en pesos
+   nuevo: 1 para mostrarlo en "Novedades" con la etiqueta "Nuevo" (quítalo cuando deje de ser novedad)
+   granel: 1 si se vende a granel (el precio es por gramo) · sin "precio" = se muestra "Precio a consultar"
+   Para actualizar precios: cambia el número de "precio" del producto (sin puntos ni signo $). */
+const DATA = [
+  {"n":"Almendra natural x 500","c":"frutos","u":"PR","ref":"101999002","precio":30000},
+  {"n":"Almendra blanca a granel","c":"frutos","u":"PR","ref":"101002008","precio":47,"granel":1},
+  {"n":"Almendra natural caja x 22.7 kg","c":"frutos","u":"PR","ref":"101999007","precio":786000},
+  {"n":"Almendra natural caja x 10 kg","c":"frutos","u":"PR","ref":"101999001","precio":378400},
+  {"n":"Almendra natural rebanada a granel","c":"frutos","u":"PR","ref":"101999006","precio":67.35,"granel":1},
+  {"n":"Romono x 1 kg Fleischman (bulto*9)","c":"levaduras","u":"P","ref":"102041001","precio":49500},
+  {"n":"Romono antimoho Gmpan x kilo","c":"levaduras","u":"P","ref":"102041002","precio":22000},
+  {"n":"Antimoho Gmpan x kilo","c":"levaduras","u":"P","ref":"102041003","precio":22000},
+  {"n":"Obleas de amaranto","c":"rellenos","u":"PR","ref":"1603001001","precio":23000},
+  {"n":"Arequipe Hiki * 135 gr","c":"rellenos","u":"PR","ref":"1603001002","precio":10000},
+  {"n":"Arequipe Hiki * 230 gr","c":"rellenos","u":"PR","ref":"1603001003","precio":12000},
+  {"n":"Salsa de chocolate * 220 gr Hiki","c":"rellenos","u":"PR","ref":"1603001005","precio":17000},
+  {"n":"Arequipe Arbolito roscon x 4,5 kilos","c":"rellenos","u":"PR","ref":"1031060002","precio":46000},
+  {"n":"Arequipe milhoja x 5kg Doña Ana","c":"rellenos","u":"PR","ref":"103064001","precio":41000},
+  {"n":"Arequipe mil hoja Puma x 4,5 kg Puma","c":"rellenos","u":"PR","ref":"103045010","precio":48000},
+  {"n":"Arequipe Bugueña x 5 kl milhoja","c":"rellenos","u":"PR","ref":"103005001","precio":65000},
+  {"n":"Arequipe Bugueña x 25 kilos milhoja","c":"rellenos","u":"PR","ref":"103005007","precio":284700},
+  {"n":"Arequipe Aranjuez x 5 kilos","c":"rellenos","u":"PR","ref":"103005008","precio":42500},
+  {"n":"Arequipe arte pastelero suave * 4 kilos","c":"rellenos","u":"PR","ref":"103005010"},
+  {"n":"Arequipe arte pastelero duro * 6 kilos","c":"rellenos","u":"PR","ref":"103005011"},
+  {"n":"Arequipe Peslac mil hoja Peslac x 25 kilos","c":"rellenos","u":"PR","ref":"103005006","precio":271700},
+  {"n":"Arequipe Peslac roscon para panaderia *25 kilos","c":"rellenos","u":"PR","ref":"103005009","precio":253000},
+  {"n":"Arequipe Pastelfrut milhoja x 5 kg suave","c":"rellenos","u":"PR","ref":"103045002","precio":48000},
+  {"n":"Arequipe roscon Pastelfrut x 5 kg Pastelfrut","c":"rellenos","u":"PR","ref":"103045003","precio":48000},
+  {"n":"Arequipe milhoja manga x 1 kg Pastelfrut","c":"rellenos","u":"PR","ref":"103045006","precio":10000},
+  {"n":"Avena molida quikely x 12 kilos","c":"harinas","u":"PR","ref":"105069001","precio":63500},
+  {"n":"Azucar micropulverizada Coburgos x 5 kilos","c":"azucares","u":"PR","ref":"104005002","precio":27800},
+  {"n":"Dolcerra x 1 kg","c":"azucares","u":"PR","ref":"104029001","precio":30300},
+  {"n":"Azucar micropul incolsa x 1kg","c":"azucares","u":"PR","ref":"104051001","precio":10300},
+  {"n":"Azucar micropul incolsa x 5 kg","c":"azucares","u":"PR","ref":"104051002","precio":45500},
+  {"n":"Azucar import x 50 kg","c":"azucares","u":"PR","ref":"104999004","precio":154000},
+  {"n":"Bicarbonato de sodio x 25 kg","c":"levaduras","u":"P","ref":"203999002","precio":132000},
+  {"n":"Bocadillo Puma 1/2@","c":"rellenos","u":"PR","ref":"200007002","precio":39000},
+  {"n":"Bocadillo Puma x 500 gr","c":"rellenos","u":"PR","ref":"200007008","precio":4500},
+  {"n":"Cernido de guayaba * 6 kilos","c":"rellenos","u":"PR","ref":"103005012"},
+  {"n":"Bocadillo de 1/2 @ sabor veleño lonja","c":"rellenos","u":"PR","ref":"200035001","precio":37000},
+  {"n":"Bolsa pan frances plastica pqx x 45 un","c":"empaques","u":"PR","ref":"2010029001","precio":4500},
+  {"n":"Bolsa de papel de libra pq x 100un","c":"empaques","u":"PR","ref":"2010029002","precio":4000},
+  {"n":"Bolsa de papel 4 paq x 100und","c":"empaques","u":"PR","ref":"2010029006","precio":7000},
+  {"n":"Bolsa pan baguette 64 cm bulto x 20 paq grande","c":"empaques","u":"PR","ref":"201100001"},
+  {"n":"Bolsa plastica transparente 5 x 15","c":"empaques","u":"PR","ref":"201008015","precio":2200},
+  {"n":"Bolsa polipropileno 4x6 pqt x 90 un","c":"empaques","u":"PR","ref":"201008016","precio":4000},
+  {"n":"Bolsa plastica transparente 6*16","c":"empaques","u":"PR","ref":"201008019","precio":2000},
+  {"n":"Bolsa pan tajado x un","c":"empaques","u":"PR","ref":"201036002","precio":8000},
+  {"n":"Bolsa plastica transp 10 x 16","c":"empaques","u":"PR","ref":"201055001","precio":2700},
+  {"n":"Bolsa plastica transp 14 x 20","c":"empaques","u":"PR","ref":"201055002","precio":7000},
+  {"n":"Bolsa plastica transp 8 x 14 pq x 80","c":"empaques","u":"PR","ref":"201055003","precio":3000},
+  {"n":"Bolsa plastica transp 5 x 8 (80 un)","c":"empaques","u":"PR","ref":"201055004","precio":700},
+  {"n":"Bolsa plastica transp 7 x 10 pq x 80","c":"empaques","u":"PR","ref":"201055005","precio":1500},
+  {"n":"Bolsa plastica transp 9 x 14","c":"empaques","u":"PR","ref":"201055009","precio":3200},
+  {"n":"Bolsa polipropileno 14 x 20","c":"empaques","u":"PR","ref":"201055011","precio":11000},
+  {"n":"Bolsa plastica transparente 2x7x0.7 boli corto","c":"empaques","u":"PR","ref":"201055012","precio":400},
+  {"n":"Bolsa plastica transp 8 x 12 cinta amarilla","c":"empaques","u":"PR","ref":"201055015","precio":7000},
+  {"n":"Bolsa plastica transp 8 x 18 cinta amarilla","c":"empaques","u":"PR","ref":"201055016","precio":2900},
+  {"n":"Bolsa plastica sabor-sabor 5 x 8 x 100 un","c":"empaques","u":"PR","ref":"201055017","precio":1700},
+  {"n":"Bolsa plastica sabor-sabor 4 x 11 x 100 un","c":"empaques","u":"PR","ref":"201055018","precio":2600},
+  {"n":"Bolsa plastica sabor-sabor 6x9 x 100 un","c":"empaques","u":"PR","ref":"201055019","precio":2200},
+  {"n":"Bolsa plastica transp 7 x 14","c":"empaques","u":"PR","ref":"201055020","precio":1700},
+  {"n":"Bolsa plastica 12x18 calibre 1,7 x 100 und","c":"empaques","u":"PR","ref":"201055021","precio":20000},
+  {"n":"Bolsa polipropileno 6*8 paq x 100","c":"empaques","u":"PR","ref":"201055022","precio":3600},
+  {"n":"Bolsa polipropileno 4*11 paq x 100","c":"empaques","u":"PR","ref":"201055023","precio":3200},
+  {"n":"Bolsa polipropileno 6*18 paq x 100","c":"empaques","u":"PR","ref":"201055024","precio":7600},
+  {"n":"Bolsa pan baguet 64 cm","c":"empaques","u":"PR","ref":"201100003","precio":15800},
+  {"n":"Brevas * 3500 Frusant","c":"frutos","u":"PR","ref":"202009007","precio":43000},
+  {"n":"Aceitunas x 350 carbonelle","c":"frutos","u":"PR","ref":"500106006","precio":9000},
+  {"n":"Caja ponque 22 x 12 cuadrada 1/4 lb","c":"empaques","u":"PR","ref":"300999001","precio":2100},
+  {"n":"Caja ponque maletin 22 x 12 1/4 lb","c":"empaques","u":"PR","ref":"300999002","precio":2000},
+  {"n":"Caja ponque 27 x 12 cuadrada 1/2 lb","c":"empaques","u":"PR","ref":"300999003","precio":2500},
+  {"n":"Caja ponque maletin 26 de 1/2","c":"empaques","u":"PR","ref":"300999004","precio":2300},
+  {"n":"Caja ponque 31 x 12 cuadrada 1 lb","c":"empaques","u":"PR","ref":"300999005","precio":2900},
+  {"n":"Caja ponque maletin 32 x 12 1lb","c":"empaques","u":"PR","ref":"300999006","precio":2600},
+  {"n":"Caja ponque 35 x 12 cuadrada 1 1/2 lb","c":"empaques","u":"PR","ref":"300999007","precio":3300},
+  {"n":"Caja ponque 42x12 cuadrada 2 lb","c":"empaques","u":"PR","ref":"300999008","precio":5000},
+  {"n":"Caja pizza de 35 x 35","c":"empaques","u":"PR","ref":"300999012","precio":2600},
+  {"n":"Caja pizza de 40 x 40","c":"empaques","u":"PR","ref":"300999013","precio":3000},
+  {"n":"Caja ponque 27 x 12 blanca 1/2 lb","c":"empaques","u":"PR","ref":"300999016","precio":2400},
+  {"n":"Caja ponque 31 x 12 blanca 1 lb","c":"empaques","u":"PR","ref":"300999017","precio":3000},
+  {"n":"Caja ponque maletin 18 *12 para postre","c":"empaques","u":"PR","ref":"300999018","precio":1900},
+  {"n":"Caja miniventana blanca para muffins","c":"empaques","u":"PR","ref":"300999020","precio":350},
+  {"n":"Caja ponque 35 x 12 blanca 1 1/2 lb","c":"empaques","u":"PR","ref":"300999022","precio":3200},
+  {"n":"Caja muffin blanca x 3un","c":"empaques","u":"PR","ref":"300999028","precio":1900},
+  {"n":"Caja muffin bajita plateada x 1un","c":"empaques","u":"PR","ref":"300999032","precio":1100},
+  {"n":"Caja muffin impresa x 1un","c":"empaques","u":"PR","ref":"300999034","precio":900},
+  {"n":"Caja ponque 22 x 12 blanca 1/4 lb","c":"empaques","u":"PR","ref":"300999035","precio":1900},
+  {"n":"Caja ponque maletin 22*22 px 1/4","c":"empaques","u":"PR","ref":"300999024","precio":2000},
+  {"n":"Capacillo blanco no. 0","c":"empaques","u":"PR","ref":"301999001","precio":7000},
+  {"n":"Capacillo blanco no. 1","c":"empaques","u":"PR","ref":"301999002","precio":7000},
+  {"n":"Capacillo blanco no. 2","c":"empaques","u":"PR","ref":"301999003","precio":11600},
+  {"n":"Capacillo blanco no. 3","c":"empaques","u":"PR","ref":"301999004","precio":10800},
+  {"n":"Capacillo blanco no. 4","c":"empaques","u":"PR","ref":"301999005","precio":12000},
+  {"n":"Capacillo blanco no. 5","c":"empaques","u":"PR","ref":"301999006","precio":16000},
+  {"n":"Capacillo fiesta no. 4","c":"empaques","u":"PR","ref":"301999011","precio":8200},
+  {"n":"Capacillo corazon no. 2","c":"empaques","u":"PR","ref":"301999015","precio":5900},
+  {"n":"Capacillo c fuerte no. 2","c":"empaques","u":"PR","ref":"301999028","precio":5200},
+  {"n":"Capacillo c fuerte no. 3","c":"empaques","u":"PR","ref":"301999029","precio":6000},
+  {"n":"Capacillo c fuerte no. 0","c":"empaques","u":"PR","ref":"301999035","precio":4900},
+  {"n":"Capacillo c fuerte no. 1","c":"empaques","u":"PR","ref":"301999036","precio":5000},
+  {"n":"Capacillo pepas no. 0","c":"empaques","u":"PR","ref":"301999046","precio":5100},
+  {"n":"Capacillo pepas no. 1","c":"empaques","u":"PR","ref":"301999047","precio":5500},
+  {"n":"Capacillo pepas no. 2","c":"empaques","u":"PR","ref":"301999048","precio":5300},
+  {"n":"Capacillo pepas no. 3","c":"empaques","u":"PR","ref":"301999049","precio":5800},
+  {"n":"Capacillo pepas no. 5","c":"empaques","u":"PR","ref":"301999051","precio":8400},
+  {"n":"Capacillo navidad N° 3","c":"empaques","u":"PR","ref":"301999082","precio":13000},
+  {"n":"Capacillo Wilton x 36","c":"empaques","u":"PR","ref":"301999109","precio":12500},
+  {"n":"Capacillo arcoiris N° 0","c":"empaques","u":"PR","ref":"301999112","precio":6000},
+  {"n":"Capacillo arcoiris N° 1","c":"empaques","u":"PR","ref":"301999114","precio":6000},
+  {"n":"Capacillo arcoiris N° 3","c":"empaques","u":"PR","ref":"301999118","precio":6400},
+  {"n":"Capacillo cebra N° 0","c":"empaques","u":"PR","ref":"301999124","precio":5000},
+  {"n":"Capacillo cebra N° 1","c":"empaques","u":"PR","ref":"301999126","precio":5100},
+  {"n":"Capacillo cebra N° 2","c":"empaques","u":"PR","ref":"301999128","precio":4000},
+  {"n":"Capacillo cebra N° 3","c":"empaques","u":"PR","ref":"301999130","precio":4500},
+  {"n":"Capacillo dorado N° 3","c":"empaques","u":"PR","ref":"301999140","precio":13000},
+  {"n":"Capacillo dorado N° 4","c":"empaques","u":"PR","ref":"301999141","precio":13600},
+  {"n":"Capacillo dorado N° 5","c":"empaques","u":"PR","ref":"301999142","precio":14500},
+  {"n":"Capacillo corazon ref 2 # 2","c":"empaques","u":"PR","ref":"301999150","precio":6300},
+  {"n":"Capacillo corazon ref 2 # 3","c":"empaques","u":"PR","ref":"301999152","precio":7600},
+  {"n":"Capacillo plateado # 2","c":"empaques","u":"PR","ref":"301999169","precio":11400},
+  {"n":"Capacillo plateado # 3","c":"empaques","u":"PR","ref":"301999170","precio":9800},
+  {"n":"Capacillo plateado # 4","c":"empaques","u":"PR","ref":"301999171","precio":12500},
+  {"n":"Capacillo plateado # 5","c":"empaques","u":"PR","ref":"301999172","precio":11000},
+  {"n":"Capacillo plateado n°5 x millar","c":"empaques","u":"PR","ref":"301999007","precio":215000},
+  {"n":"Cereza marrashino x 125 gr la coruña","c":"frutos","u":"PR","ref":"302009001","precio":5200},
+  {"n":"Cereza marrashino x 250 gr la coruña","c":"frutos","u":"PR","ref":"302009002","precio":8000},
+  {"n":"Cereza con tallo x 1000 3a","c":"frutos","u":"PR","ref":"3020040012","precio":30000},
+  {"n":"Cereza marrashino x 4000 gr 3a","c":"frutos","u":"PR","ref":"302004004","precio":85000},
+  {"n":"Cereza x 500 3a","c":"frutos","u":"PR","ref":"302004011","precio":15000},
+  {"n":"Cereza x 1000 3a","c":"frutos","u":"PR","ref":"302004013","precio":26000},
+  {"n":"Cocoa alcalina bulto x 25 kl","c":"chocolates","u":"R","ref":"303093002","precio":296300},
+  {"n":"Granulado crocante oscuro x 1 kg fleischmman","c":"chocolates","u":"R","ref":"303041002","precio":28000},
+  {"n":"Granulado crocante multicolor x 1kg harald","c":"chocolates","u":"R","ref":"303039002","precio":30000},
+  {"n":"Granulado crocante multicolor Fleischman x 9 kilos","c":"chocolates","u":"R","ref":"303039004","precio":319000},
+  {"n":"Chips de chocolate x 20 kl.casa luker","c":"chocolates","u":"R","ref":"303041001","precio":836000},
+  {"n":"Chip de chocolate blanco CNCH x 1 kg","c":"chocolates","u":"R","ref":"303060002","precio":50000},
+  {"n":"Cocoa casa Lucker x 25 kg","c":"chocolates","u":"R","ref":"303060003","precio":1300000},
+  {"n":"Cocoa en polvo cordillera x 24 kilos","c":"chocolates","u":"R","ref":"303093001","precio":1392000},
+  {"n":"Cocoa Corona x 230 gr","c":"chocolates","u":"R","ref":"303010008","precio":18000},
+  {"n":"Grageas de chocolate x 500 m&m","c":"chocolates","u":"R","ref":"303010010","precio":50000},
+  {"n":"Chips de chocolate negro cj*12 kilos","c":"chocolates","u":"R","ref":"303010012"},
+  {"n":"Chips de chocolate negro *100 gr Hiki","c":"chocolates","u":"R","ref":"1603001006"},
+  {"n":"Chips de chocolate *25 gr Hiki","c":"chocolates","u":"R","ref":"1603001007"},
+  {"n":"Te chai * 200","c":"chocolates","u":"R","ref":"1603001008"},
+  {"n":"Cobertura chocolate semiamarga Dagusto x kilo","c":"chocolates","u":"R","ref":"306025005","precio":21400},
+  {"n":"Ciruela sin semilla x 10 kl","c":"frutos","u":"PR","ref":"304012001","precio":227000},
+  {"n":"Decocrem puratos x 4 kilos negro","c":"chocolates","u":"R","ref":"306010004","precio":130000},
+  {"n":"Decocrem blanco * 4 kio","c":"chocolates","u":"R","ref":"306010013","precio":120000},
+  {"n":"Cobertura de chocolate blanca x 1 kl","c":"chocolates","u":"R","ref":"306010001","precio":50000},
+  {"n":"Cobertura de barra chocolate negra x 1 kl","c":"chocolates","u":"R","ref":"306010002","precio":43000},
+  {"n":"Cobertura de chocolate lpu x 10 kg","c":"chocolates","u":"R","ref":"306010003","precio":189700},
+  {"n":"Chococubierta negra x 4 kg","c":"chocolates","u":"R","ref":"306010010","precio":149000},
+  {"n":"Cobert.monedas de chocol.negra x 1 kl CNCH","c":"chocolates","u":"R","ref":"306010014","precio":51000},
+  {"n":"Chococubierta negra x kilo","c":"chocolates","u":"R","ref":"306010016","precio":40000},
+  {"n":"Cobertura monedas blanca x kilo","c":"chocolates","u":"R","ref":"306039001","precio":58600},
+  {"n":"Fondant Rich x 1 kilo","c":"chocolates","u":"R","ref":"306024003","precio":26000},
+  {"n":"Satinice x 10 kg","c":"chocolates","u":"R","ref":"306038002","precio":274800},
+  {"n":"Fondant caramelo x kilo Sigra","c":"chocolates","u":"R","ref":"306024004","precio":15500},
+  {"n":"Fondant blanco x 1 kg","c":"chocolates","u":"R","ref":"306024005","precio":23600},
+  {"n":"Coco cabello de angel x 1kg Coburgos","c":"frutos","u":"PR","ref":"307013004","precio":46000},
+  {"n":"Coco rallado azuc x 2.5 kg Coburgos","c":"frutos","u":"PR","ref":"307013008","precio":44000},
+  {"n":"Color caramelo Coburgos x 650","c":"frutos","u":"PR","ref":"307013012","precio":9000},
+  {"n":"Coco cabello de angel x kilos Colorisa","c":"frutos","u":"PR","ref":"307081001","precio":22800},
+  {"n":"Leche de coco selecto x 400 ml","c":"frutos","u":"PR","ref":"307106001","precio":10400},
+  {"n":"Crema de coco selecto x 510 ml","c":"frutos","u":"PR","ref":"307106002","precio":20000},
+  {"n":"Canela molida pa sazonar x 500gr","c":"frutos","u":"PR","ref":"310096001","precio":41000},
+  {"n":"Color caramelo x 75 gr deliaroma","c":"esencias","u":"R","ref":"308017004","precio":2000},
+  {"n":"Color caramelo Fleischmann x 650 cc","c":"esencias","u":"R","ref":"308041001","precio":14000},
+  {"n":"Color caramelo Fleischmann galon","c":"esencias","u":"R","ref":"308041002","precio":84000},
+  {"n":"Polvo amarillo huevo x 25 gr carol","c":"esencias","u":"R","ref":"308014005","precio":3000},
+  {"n":"Polvo rojo escarlata x 25 gr carol","c":"esencias","u":"R","ref":"308014006","precio":2700},
+  {"n":"Polvo rojo escarlata x 500 gr carol","c":"esencias","u":"R","ref":"308014007","precio":26500},
+  {"n":"Polvo amarillo huevo x 500 gr carol","c":"esencias","u":"R","ref":"308014008","precio":22500},
+  {"n":"Polvo amarillo huevo x 1 libra Carolesen","c":"esencias","u":"R","ref":"308098001","precio":15600},
+  {"n":"Color caramelo x 155 gr Carolesen","c":"esencias","u":"R","ref":"308016002","precio":6000},
+  {"n":"Colorante gel rosado x 13 ml","c":"esencias","u":"R","ref":"308015081","precio":8800},
+  {"n":"Color liquido x 60 ml Colorisa rojo","c":"esencias","u":"R","ref":"308015005","precio":23000},
+  {"n":"Color liquido x 60 ml Colorisa amarillo","c":"esencias","u":"R","ref":"308015009","precio":23000},
+  {"n":"Color liquido x 60 ml Colorisa rosado","c":"esencias","u":"R","ref":"308015010","precio":23000},
+  {"n":"Color liquido x 60 ml Colorisa fucsia","c":"esencias","u":"R","ref":"308015011","precio":23000},
+  {"n":"Color liquido x 60 ml Colorisa cafe","c":"esencias","u":"R","ref":"308015012","precio":23000},
+  {"n":"Color liquido x 60 ml Colorisa negro","c":"esencias","u":"R","ref":"308015013","precio":23000},
+  {"n":"Color liquido x 60 ml Colorisa naranja","c":"esencias","u":"R","ref":"308015014","precio":23000},
+  {"n":"Color liquido x 60 ml Colorisa lila","c":"esencias","u":"R","ref":"308015015","precio":23000},
+  {"n":"Color liquido x 60 ml colorisaverde limon","c":"esencias","u":"R","ref":"308015016","precio":23000},
+  {"n":"Color liquido x 60 ml Colorisa violeta","c":"esencias","u":"R","ref":"308015017","precio":23000},
+  {"n":"Color liquido x 7 cc Colorisa piel","c":"esencias","u":"R","ref":"308015019","precio":5000},
+  {"n":"Color liquido x 7 cc Colorisa negro","c":"esencias","u":"R","ref":"308015020","precio":5000},
+  {"n":"Color liquido x 7 cc Colorisa blanco","c":"esencias","u":"R","ref":"308015021","precio":5000},
+  {"n":"Color liquido x 7 cc Colorisa rosado","c":"esencias","u":"R","ref":"308015022","precio":5000},
+  {"n":"Color liquido x 7 cc Colorisa fucsia","c":"esencias","u":"R","ref":"308015023","precio":5000},
+  {"n":"Color liquido x 7 cc Colorisa lila","c":"esencias","u":"R","ref":"308015024","precio":5000},
+  {"n":"Color liquido x 7 cc Colorisa cafe","c":"esencias","u":"R","ref":"308015025","precio":5000},
+  {"n":"Color liquido x 7 cc Colorisa naranja","c":"esencias","u":"R","ref":"308015027","precio":5000},
+  {"n":"Color liquido x 12 cc Colorisa verde","c":"esencias","u":"R","ref":"308015028","precio":5700},
+  {"n":"Color liquido x 12 cc Colorisa amarillo","c":"esencias","u":"R","ref":"308015029","precio":5700},
+  {"n":"Color liquido x 12 cc Colorisa azul","c":"esencias","u":"R","ref":"308015030","precio":5700},
+  {"n":"Color liquido x 12 cc Colorisa rojo","c":"esencias","u":"R","ref":"308015031","precio":5700},
+  {"n":"Color liquido x 60 ml Colorisa piel","c":"esencias","u":"R","ref":"308015033","precio":21000},
+  {"n":"Color liquido x 390 ml Colorisa amarillo","c":"esencias","u":"R","ref":"308015047","precio":83000},
+  {"n":"Color liquido x 390 ml Colorisa fucsia","c":"esencias","u":"R","ref":"308015050","precio":83000},
+  {"n":"Color liquido x 390 ml Colorisa naranja","c":"esencias","u":"R","ref":"308015051","precio":83000},
+  {"n":"Color liquido x 390 ml Colorisa rojo","c":"esencias","u":"R","ref":"308015053","precio":83000},
+  {"n":"Color liquido x 390 ml Colorisa rosado","c":"esencias","u":"R","ref":"308015054","precio":83000},
+  {"n":"Color liquido x 390 ml Colorisa verde","c":"esencias","u":"R","ref":"308015055","precio":83000},
+  {"n":"Color liquido x 7 cc Colorisa rojo navidad","c":"esencias","u":"R","ref":"308015059","precio":5000},
+  {"n":"Color liquido x 390 ml Colorisa blanco","c":"esencias","u":"R","ref":"308015064","precio":83000},
+  {"n":"Colorante gel x 60 ml Colorisa azul","c":"esencias","u":"R","ref":"308015065","precio":25800},
+  {"n":"Colorante gel x 60 ml Colorisa rosado","c":"esencias","u":"R","ref":"308015067","precio":21000},
+  {"n":"Colorante en gel neon naranja 17 gr","c":"esencias","u":"R","ref":"308077002","precio":6500},
+  {"n":"Oregano picado Bonniato x 20 gr","c":"esencias","u":"R","ref":"2106014001","precio":2500},
+  {"n":"Paprika en polvo Bonniato x 60 gr","c":"esencias","u":"R","ref":"2106014002","precio":3000},
+  {"n":"Albahaca molida Bonniato x 43 g","c":"esencias","u":"R","ref":"2106014003","precio":4000},
+  {"n":"Cilantro molido Bonniato x 50 gr","c":"esencias","u":"R","ref":"2106014005","precio":3600},
+  {"n":"Crema chantilly plus Fleischmann x 500 gr","c":"rellenos","u":"PR","ref":"309041001","precio":20000},
+  {"n":"Crema chantilly vainilla x 1 kl Clack CNCH","c":"rellenos","u":"PR","ref":"309010001","precio":66000},
+  {"n":"Base para merengue Legy x kilo","c":"rellenos","u":"PR","ref":"800041002","precio":65300},
+  {"n":"Polvo bronce x 500","c":"rellenos","u":"PR","ref":"308037001","precio":185000},
+  {"n":"Polvo dorado x libra","c":"rellenos","u":"PR","ref":"308037002","precio":184700},
+  {"n":"Escarcha comestible de colores x 250 gra","c":"rellenos","u":"PR","ref":"308037005","precio":75000},
+  {"n":"Bettercreme natas x 4 kg","c":"rellenos","u":"PR","ref":"309038002","precio":105000},
+  {"n":"Whip topping base 4 lt","c":"rellenos","u":"PR","ref":"309038006","precio":95000},
+  {"n":"Bettercreme supremo x 4 kg","c":"rellenos","u":"PR","ref":"309038008","precio":75300},
+  {"n":"Bettercremevainilla suprema x 4 kg","c":"rellenos","u":"PR","ref":"309038012","precio":86600},
+  {"n":"Bettercreme de chocolate x 1 kg","c":"rellenos","u":"PR","ref":"309038027","precio":23500},
+  {"n":"Crema base Dagusto x 1 litro","c":"rellenos","u":"PR","ref":"309025001","precio":18000},
+  {"n":"Crema nata Dagusto x 1 litro","c":"rellenos","u":"PR","ref":"309025003","precio":22500},
+  {"n":"Crema vainilla Dagusto x 1 litro","c":"rellenos","u":"PR","ref":"309025004","precio":22500},
+  {"n":"Jarabe tres leche Dagusto * litro","c":"rellenos","u":"PR","ref":"309025005","precio":18500},
+  {"n":"Vaso cristal 12 oz -Resq AJV6762434","c":"empaques","u":"PR","ref":"2100006011","precio":500},
+  {"n":"Tapa cristal para vaso Resq 12 y 16 oz","c":"empaques","u":"PR","ref":"2100006013","precio":500},
+  {"n":"Vaso cristal 9oz Resq","c":"empaques","u":"PR","ref":"2100006014","precio":400},
+  {"n":"Molde aluminio 8 oz Darnell","c":"empaques","u":"PR","ref":"4001050006","precio":112000},
+  {"n":"Tapa espumada para molde aluminio 8oz","c":"empaques","u":"PR","ref":"4001050007","precio":48200},
+  {"n":"Cuchara pequeña11 cm cristal D951100","c":"empaques","u":"PR","ref":"401006200","precio":9000},
+  {"n":"Cuchara cristal 7,5 cm (paqx 50 und)","c":"empaques","u":"PR","ref":"401006205","precio":2500},
+  {"n":"Vaso cristal 16oz D621600N","c":"empaques","u":"PR","ref":"2100006012","precio":800},
+  {"n":"Base circular 17 cm blanca 1/4 lb - D101701","c":"empaques","u":"PR","ref":"401006001","precio":36000},
+  {"n":"Base circular 24.5 cm blanca 1/2 lb - D102401","c":"empaques","u":"PR","ref":"401006002","precio":73500},
+  {"n":"Base circular 30 cm blanca 1 lb - D103001","c":"empaques","u":"PR","ref":"401006003","precio":103000},
+  {"n":"Base circular 36 cm blanca 1 1/2 lb - D103601","c":"empaques","u":"PR","ref":"401006004","precio":160000},
+  {"n":"Base circular 42 cm blanca 2 lb - D104201","c":"empaques","u":"PR","ref":"401006005","precio":293000},
+  {"n":"Base cuad 24 x 24 cm blanca 1/2 lb - D005801","c":"empaques","u":"PR","ref":"401006006","precio":163000},
+  {"n":"Base cuad 35 x 35 cm blanca 1 1/2 lb - D001201CUADRADA","c":"empaques","u":"PR","ref":"401006008","precio":113500},
+  {"n":"Base cuad 43 x 35 cm blanca 2 lb - D0015001","c":"empaques","u":"PR","ref":"401006009","precio":339000},
+  {"n":"Contenedor triangular 11x5","c":"empaques","u":"PR","ref":"401006010","precio":98000},
+  {"n":"Contenedor transp 8 oz tapa plana-D750800","c":"empaques","u":"PR","ref":"401006011","precio":87000},
+  {"n":"Contenedor transp 12 oz tapa plana - D751200","c":"empaques","u":"PR","ref":"401006012","precio":102600},
+  {"n":"Contenedor 4 oz con tapa - D700401N","c":"empaques","u":"PR","ref":"401006014","precio":142500},
+  {"n":"Domo con base 17 cm 1/4 lb - D151710XX","c":"empaques","u":"PR","ref":"401006018","precio":85000},
+  {"n":"Domo con base 25.5 1/2 lb - D15251299","c":"empaques","u":"PR","ref":"401006019","precio":170000},
+  {"n":"Domo con base 28 cm 1 lb - D152812XX50 un","c":"empaques","u":"PR","ref":"401006020","precio":177000},
+  {"n":"Domo con base 33 cm 2 lb - D153312XX","c":"empaques","u":"PR","ref":"401006021","precio":289000},
+  {"n":"Domo con base rect 34 x 14.5 cm - D166312XX","c":"empaques","u":"PR","ref":"401006022","precio":75000},
+  {"n":"Portacomida j1 blanco - D403101SNW","c":"empaques","u":"PR","ref":"401006024","precio":84700},
+  {"n":"Portacomida c1 blanco - D402001","c":"empaques","u":"PR","ref":"401006025","precio":148000},
+  {"n":"Molde aluminio 16 oz Darnell sin tapa - Q501600","c":"empaques","u":"PR","ref":"401006026","precio":153000},
+  {"n":"Molde aluminio 24 oz - Q502400","c":"empaques","u":"PR","ref":"401006027","precio":174000},
+  {"n":"Tenedor Tami blanco caja x 1000 emp x 100 - D81110","c":"empaques","u":"PR","ref":"401006032","precio":36500},
+  {"n":"Bandeja N° 17 blanca - D201701","c":"empaques","u":"PR","ref":"401006036","precio":66000},
+  {"n":"Bandeja N° 7 blanca - D200701B","c":"empaques","u":"PR","ref":"401006037","precio":95000},
+  {"n":"Bandeja N° 25 blanca - D202501","c":"empaques","u":"PR","ref":"401006038","precio":409000},
+  {"n":"Contenedor 16oz con tapa Darnell - D701601NLS","c":"empaques","u":"PR","ref":"401006040","precio":144000},
+  {"n":"Tapa esp para cont alum 14 x 11.5 16 oz - D001601L","c":"empaques","u":"PR","ref":"401006041","precio":39000},
+  {"n":"Tapa espum para cont alum 17.9 x 12.8 24 oz - d002","c":"empaques","u":"PR","ref":"401006042","precio":55000},
+  {"n":"Tapa esp para cont alum 28 oz 15 x 21.5 - D003201L","c":"empaques","u":"PR","ref":"401006043","precio":32300},
+  {"n":"Domo con base rect 21x 16 cm - D164912XX","c":"empaques","u":"PR","ref":"401006044","precio":60100},
+  {"n":"Bandeja N° 4 blanca - D200401B","c":"empaques","u":"PR","ref":"401006045","precio":122000},
+  {"n":"Bandeja N° 8 blanca - D200801B","c":"empaques","u":"PR","ref":"401006046","precio":156000},
+  {"n":"Plato espum hondo 12oz blanco - D5106101N","c":"empaques","u":"PR","ref":"401006047","precio":30000},
+  {"n":"Portacomida c1 negro","c":"empaques","u":"PR","ref":"401006054","precio":182000},
+  {"n":"Bandeja N° 1 D200101 x 500 unds","c":"empaques","u":"PR","ref":"401006058","precio":57000},
+  {"n":"Domo con base 22 cm caja x 50 un","c":"empaques","u":"PR","ref":"401006073"},
+  {"n":"Bandeja N° 4 honda","c":"empaques","u":"PR","ref":"401006081"},
+  {"n":"Cuchara dulcera Tami blanca x 100un","c":"empaques","u":"PR","ref":"401006084","precio":3100},
+  {"n":"Plato espum hondo 20oz blanco x paq - D5309201","c":"empaques","u":"PR","ref":"401006088","precio":2200},
+  {"n":"Bandeja honda N° 25 1 1/2 blanca - D2152501","c":"empaques","u":"PR","ref":"401006089","precio":337000},
+  {"n":"Copa veneciana 5oz - D720500","c":"empaques","u":"PR","ref":"401006090","precio":272000},
+  {"n":"Cuchillo Tami blanco x paq 100","c":"empaques","u":"PR","ref":"401006098","precio":3800},
+  {"n":"Copa souffle 5.5 oz Darnell - D635502A r","c":"empaques","u":"PR","ref":"401006104","precio":10000},
+  {"n":"Cuchara dulcera Tami blanca ue:20 - D83102001","c":"empaques","u":"PR","ref":"401006106","precio":32500},
+  {"n":"Contenedor visual pack vn6 tapa alta - D720VN600","c":"empaques","u":"PR","ref":"401006107","precio":447000},
+  {"n":"Contenedor visual pack vn6 tapa baja - D720VN600TB","c":"empaques","u":"PR","ref":"401006109","precio":192300},
+  {"n":"Plato redondo 4 divisiones negro con tapa","c":"empaques","u":"PR","ref":"401006110","precio":86400},
+  {"n":"Tapa esp para cont alum 8 oz","c":"empaques","u":"PR","ref":"401006111","precio":49600},
+  {"n":"Contenedor corazon con tapa 8 x 4 - D76080400Q","c":"empaques","u":"PR","ref":"401006113","precio":245000},
+  {"n":"Contenedor transp triangular tapa alta 11 x 7 - d7","c":"empaques","u":"PR","ref":"401006116","precio":110000},
+  {"n":"Contenedor transp 8 oz tapa alta - D750800G","c":"empaques","u":"PR","ref":"401006118","precio":93000},
+  {"n":"Copa soufle 1 oz Darnell - D631002A","c":"empaques","u":"PR","ref":"401006122","precio":2400},
+  {"n":"Copa soufle 2 oz Darnell - D632002A","c":"empaques","u":"PR","ref":"401006123","precio":3500},
+  {"n":"Contenedor visual pack vn1 tapa alta - D720VN100","c":"empaques","u":"PR","ref":"401006124","precio":447000},
+  {"n":"Contenedor visual pack vn1 tapa baja - D720VN100TB","c":"empaques","u":"PR","ref":"401006126","precio":324900},
+  {"n":"Domo alta vis con base negra 25.5 1/2 lb - D15251","c":"empaques","u":"PR","ref":"401006130","precio":168000},
+  {"n":"Contenedor twist 32 oz con tapa - D7713200","c":"empaques","u":"PR","ref":"401006132","precio":84000},
+  {"n":"Domo alta vis con base negra 1/4 17 cm lb x UND15171099V","c":"empaques","u":"PR","ref":"401006135","precio":57800},
+  {"n":"Domo doble uso 8 oz cristal - D770800S","c":"empaques","u":"PR","ref":"401006136","precio":72600},
+  {"n":"Domo doble uso 16 oz cristal","c":"empaques","u":"PR","ref":"401006137","precio":143000},
+  {"n":"Portacomida i1 blanco - D409201","c":"empaques","u":"PR","ref":"401006140","precio":29500},
+  {"n":"Contenedor transp 12 oz tapa alta - D751200G","c":"empaques","u":"PR","ref":"401006142","precio":133000},
+  {"n":"Base circular 21 cm blanca 3/4 lb -D102101","c":"empaques","u":"PR","ref":"401006143","precio":70000},
+  {"n":"Contenedor visual pack vj-12 minimuffins - D720VJ1","c":"empaques","u":"PR","ref":"401006147","precio":77000},
+  {"n":"Domo alta vis con base negra 28 cm 1 lb - D1528129","c":"empaques","u":"PR","ref":"401006149","precio":202000},
+  {"n":"Contenedor twist 8 oz","c":"empaques","u":"PR","ref":"401006150","precio":66000},
+  {"n":"Contenedor sello plus japon 8 oz - DC0760800","c":"empaques","u":"PR","ref":"401006151","precio":57000},
+  {"n":"Domo cuadrado con b negra 16.5 cm x 5.5 1/4 lb - d","c":"empaques","u":"PR","ref":"401006152","precio":102500},
+  {"n":"Domo cuadrado con b negra 26.5 cm x 5.5 1/2lb - d1","c":"empaques","u":"PR","ref":"401006153","precio":90000},
+  {"n":"Domo bajo cheesecake base negra 17 cm - D15170699","c":"empaques","u":"PR","ref":"401006154","precio":34000},
+  {"n":"Domo bajo cheesecake base negra 25.5 cm - D152506","c":"empaques","u":"PR","ref":"401006155","precio":51000},
+  {"n":"Contenedor 24 oz con tapa Darnel - D702401LS","c":"empaques","u":"PR","ref":"401006166","precio":123000},
+  {"n":"Contenedor transp 8 oz tapa media - D750800F","c":"empaques","u":"PR","ref":"401006168","precio":84000},
+  {"n":"Contenedor deli 6 oz con tapa - DP7300602","c":"empaques","u":"PR","ref":"401006169","precio":53000},
+  {"n":"Contenedor deli 8 oz con tapa - DP7300802","c":"empaques","u":"PR","ref":"401006170","precio":55000},
+  {"n":"Tapa cristal para cont aluminio 8 oz D001200T","c":"empaques","u":"PR","ref":"401006177","precio":85000},
+  {"n":"Tapa cristal para cont aluminio 17.9x12.8 24 oz d0","c":"empaques","u":"PR","ref":"401006178","precio":281000},
+  {"n":"Plato cuadrado cristal petite 1.3 oz - DC0680200","c":"empaques","u":"PR","ref":"401006184","precio":115000},
+  {"n":"Plato cuadrado negro petite 1.3 oz - DC0680299","c":"empaques","u":"PR","ref":"401006186","precio":115000},
+  {"n":"Cuchara degustacion petite negra - DC0680399","c":"empaques","u":"PR","ref":"401006190","precio":115000},
+  {"n":"Copa redonda petite negra 3 oz - DC0680699","c":"empaques","u":"PR","ref":"401006192","precio":60000},
+  {"n":"Cuchara pequeña Darnel premium x 30 un (140pq xcaja)","c":"empaques","u":"PR","ref":"401006194","precio":3300},
+  {"n":"Cupcake Visualpack x 1 uno Ajover D720VA100TAN50","c":"empaques","u":"PR","ref":"401006195","precio":600},
+  {"n":"Cupcake x 2 tapa alta Visualpack Ajover D720VI200","c":"empaques","u":"PR","ref":"401006196","precio":410},
+  {"n":"Cupcake x 2 tapa baja Visualpack Ajover D720VI200","c":"empaques","u":"PR","ref":"401006197","precio":270},
+  {"n":"Papel parafinado x 10 mts Alumina","c":"empaques","u":"PR","ref":"4001050001","precio":4200},
+  {"n":"Molde ovalado extrafuerte Alumina","c":"empaques","u":"PR","ref":"4001050002","precio":5700},
+  {"n":"Molde aluminio 28 oz Alumina paq x 7 und","c":"empaques","u":"PR","ref":"4001050004","precio":4000},
+  {"n":"Molde multiusos Alumina 19*29*4,5 cm paquete x 4 und","c":"empaques","u":"PR","ref":"4001050005","precio":5800},
+  {"n":"Disco doble faz # 30 libra","c":"empaques","u":"PR","ref":"402072029","precio":4000},
+  {"n":"Contenedor transparente 8oz tapa alta Lambiempaque 11*7","c":"empaques","u":"PR","ref":"401108002","precio":92200},
+  {"n":"Contenedor transparente 8oz tapa baja Lambiempaque","c":"empaques","u":"PR","ref":"401108003","precio":92000},
+  {"n":"Domo de libra 28*12 Lambiempaque","c":"empaques","u":"PR","ref":"401108005","precio":137900},
+  {"n":"Papel parafinado Everhouse * 16 mts","c":"empaques","u":"PR","ref":"500106002","precio":7500},
+  {"n":"Papel parafinado rojo-blanco everhosue x 16 mts","c":"empaques","u":"PR","ref":"500106003","precio":9900},
+  {"n":"Papel pelicula x 20 metros Ever House","c":"empaques","u":"PR","ref":"500106008","precio":6000},
+  {"n":"Papel aluminio x 7 mts Ever House","c":"empaques","u":"PR","ref":"500106009","precio":3800},
+  {"n":"Bandeja de aluminio 15,6*10,9*2,5","c":"empaques","u":"PR","ref":"401999004","precio":10000},
+  {"n":"Molde alum rect 43 x 33 Osaky sf69","c":"empaques","u":"PR","ref":"401999007","precio":2500},
+  {"n":"Molde alum lasagna mini SDA2143 Osaky","c":"empaques","u":"PR","ref":"401999008","precio":150},
+  {"n":"Molde alum redondo Osaky pequeño mc-3 x un","c":"empaques","u":"PR","ref":"401999017","precio":1500},
+  {"n":"Molde para flan 16","c":"empaques","u":"PR","ref":"401061001","precio":23000},
+  {"n":"Molde para flan 14","c":"empaques","u":"PR","ref":"401061002","precio":23000},
+  {"n":"Disco dorado ondulado N° 36 de 1 1/2 lb","c":"empaques","u":"PR","ref":"402072004","precio":4500},
+  {"n":"Disco dorado redondo N° 16 de 1/4 lb","c":"empaques","u":"PR","ref":"402072005","precio":1400},
+  {"n":"Disco dorado redondo N° 26 de 1/2 lb","c":"empaques","u":"PR","ref":"402072006","precio":2900},
+  {"n":"Disco dorado redondo N° 30 de 1lb","c":"empaques","u":"PR","ref":"402072007","precio":4000},
+  {"n":"Disco dorado redondo N° 36 de 1 1/2 lb","c":"empaques","u":"PR","ref":"402072008","precio":5700},
+  {"n":"Disco dorado y redondo N° 40 de 2 lb","c":"empaques","u":"PR","ref":"402072009","precio":5200},
+  {"n":"Porta vaso redondo plateado","c":"empaques","u":"PR","ref":"402072010","precio":550},
+  {"n":"Porta vaso redondo dorado","c":"empaques","u":"PR","ref":"402072011","precio":450},
+  {"n":"Disco dorado y plateado cuadrado 26*26","c":"empaques","u":"PR","ref":"402072012","precio":3000},
+  {"n":"Disco dorado y plateado cuadrado 30*30","c":"empaques","u":"PR","ref":"402072013","precio":4200},
+  {"n":"Disco dorado y plateado cuadrado 36*36","c":"empaques","u":"PR","ref":"402072014","precio":4800},
+  {"n":"Disco dorado y plateado cuadrado 40*40","c":"empaques","u":"PR","ref":"402072015","precio":5300},
+  {"n":"Disco dorado ondulado N° 40","c":"empaques","u":"PR","ref":"402072016","precio":5600},
+  {"n":"Durazno en mitades x 2600 gr 3a","c":"frutos","u":"PR","ref":"400009003","precio":35000},
+  {"n":"Durazno en mitades x 820 gr selecto","c":"frutos","u":"PR","ref":"400009002","precio":13000},
+  {"n":"Durazno x 425 3a","c":"frutos","u":"PR","ref":"302004007","precio":7900},
+  {"n":"Durazno x 820 3a","c":"frutos","u":"PR","ref":"302004008","precio":12500},
+  {"n":"Envase de vidrio 50cc con corcho","c":"empaques","u":"PR","ref":"503082001","precio":2600},
+  {"n":"Dispensador 12\" Darnell x 100 - SD1J12-100f","c":"empaques","u":"PR","ref":"500006001","precio":48000},
+  {"n":"Papel pelicula 600 mts everhause","c":"empaques","u":"PR","ref":"500006003","precio":95200},
+  {"n":"Papel aluminio de 12\" Darnell repuesto x un","c":"empaques","u":"PR","ref":"500006004","precio":2800},
+  {"n":"Papel aluminio de x 100 mts caja x 6 un 12\"x 330ft","c":"empaques","u":"PR","ref":"500006005"},
+  {"n":"Papel aluminio * 40 mts Everhouse","c":"empaques","u":"PR","ref":"500006006","precio":13000},
+  {"n":"Dispensador Darnell 12\" x 200 (61 mts)","c":"empaques","u":"PR","ref":"500006007","precio":168500},
+  {"n":"Papel parafinado x 20 mts","c":"empaques","u":"PR","ref":"900999287","precio":6000},
+  {"n":"Papel parafinado x 50 mts","c":"empaques","u":"PR","ref":"900999288","precio":12000},
+  {"n":"Papel parafinado x 100 mts","c":"empaques","u":"PR","ref":"900999289","precio":20000},
+  {"n":"Papel aluminio Ever House x 100 metros","c":"empaques","u":"PR","ref":"500106001","precio":34000},
+  {"n":"Esencia piña sabrimax * 60","c":"esencias","u":"R","ref":"501014001","precio":3000},
+  {"n":"Esencia deliaromas x 3850 mantequilla garrafa","c":"esencias","u":"R","ref":"501098001","precio":43900},
+  {"n":"Esencia deliaromas x 500 coco","c":"esencias","u":"R","ref":"501098004","precio":5800},
+  {"n":"Esencia deliaromas x 500 vainilla negra","c":"esencias","u":"R","ref":"501098008","precio":5800},
+  {"n":"Esencia deliaromas x 500 nata","c":"esencias","u":"R","ref":"501098009","precio":5800},
+  {"n":"Esencia fleiscman mantequilla x 500 cc","c":"esencias","u":"R","ref":"501041004","precio":18000},
+  {"n":"Esencia fleiscman coco x 500 cc","c":"esencias","u":"R","ref":"501041005","precio":18000},
+  {"n":"Esencia fleiscman naranja x 500 cc","c":"esencias","u":"R","ref":"501041006","precio":18000},
+  {"n":"Esencia fleiscman canela x 500 cc","c":"esencias","u":"R","ref":"501041007","precio":18000},
+  {"n":"Esencia Fleischman vainilla negra * 500","c":"esencias","u":"R","ref":"501041008","precio":18000},
+  {"n":"Esencia fleiscman vainilla blanca x 500 cc fleis","c":"esencias","u":"R","ref":"501041009","precio":18000},
+  {"n":"Esencia fleiscman hinojo x 500 cc","c":"esencias","u":"R","ref":"501041010","precio":18000},
+  {"n":"Esencia fleiscman ponque x 500 cc","c":"esencias","u":"R","ref":"501041011","precio":18000},
+  {"n":"Esencia fleiscman queso x 500 cc","c":"esencias","u":"R","ref":"501041012","precio":18000},
+  {"n":"Esencia fleiscman queso x 3785","c":"esencias","u":"R","ref":"501041013","precio":107000},
+  {"n":"Esencia fleiscman mantequilla x 3785","c":"esencias","u":"R","ref":"501041015","precio":107000},
+  {"n":"Esencia fleiscman banano x 500 cc","c":"esencias","u":"R","ref":"501041016","precio":18000},
+  {"n":"Esencia fleiscman coco x 3785","c":"esencias","u":"R","ref":"501041017","precio":107000},
+  {"n":"Esencia fleiscman piña x 500","c":"esencias","u":"R","ref":"501041018","precio":18000},
+  {"n":"Esencia fleiscman vainilla negra x 3785","c":"esencias","u":"R","ref":"501041019","precio":107000},
+  {"n":"Esencia incolsa arequipe x 505 cc","c":"esencias","u":"R","ref":"501051001","precio":18000},
+  {"n":"Esencia banano carolessen * 60","c":"esencias","u":"R","ref":"501098007","precio":3500},
+  {"n":"Esencia ecosaborx 20 litros mantequilla","c":"esencias","u":"R","ref":"501017055","precio":138000},
+  {"n":"Esencia Prodia zanahoria *500","c":"esencias","u":"R","ref":"501017003","precio":25000},
+  {"n":"Esencia Prodia x 500 cc ron con pasas ==========","c":"esencias","u":"R","ref":"501017005","precio":17000},
+  {"n":"Esencia Prodia x 500 cc leche condensada","c":"esencias","u":"R","ref":"501017006","precio":17000},
+  {"n":"Esencia Prodia x 500 cc mantequilla","c":"esencias","u":"R","ref":"501017009","precio":17000},
+  {"n":"Esencia Prodia x 500 cc mantecado","c":"esencias","u":"R","ref":"501017010","precio":17000},
+  {"n":"Esencia Prodia x 500 cc vainilla blanca","c":"esencias","u":"R","ref":"501017012","precio":17000},
+  {"n":"Esencia Prodia x 500 cc coco","c":"esencias","u":"R","ref":"501017013","precio":17000},
+  {"n":"Esencia Prodia x 500 cc hinojo","c":"esencias","u":"R","ref":"501017014","precio":22800},
+  {"n":"Esencia Prodia x 500 cc vainilla caramelo","c":"esencias","u":"R","ref":"501017019","precio":17000},
+  {"n":"Esencia Prodia x 500 cc arequipe","c":"esencias","u":"R","ref":"501017020","precio":17000},
+  {"n":"Esencia Prodia x 60 leche condensada","c":"esencias","u":"R","ref":"501017022","precio":4300},
+  {"n":"Esencia Prodia x 60 mantequilla","c":"esencias","u":"R","ref":"501017025","precio":5000},
+  {"n":"Esencia Prodia x 60 limon","c":"esencias","u":"R","ref":"501017030","precio":6500},
+  {"n":"Esencia Prodia x 60 coco","c":"esencias","u":"R","ref":"501017034","precio":5000},
+  {"n":"Esencia Prodia x 60 arequipe","c":"esencias","u":"R","ref":"501017036","precio":5000},
+  {"n":"Esencia Prodia x 60 vainilla blanca","c":"esencias","u":"R","ref":"501017037","precio":5000},
+  {"n":"Esencia Prodia x 60 naranja","c":"esencias","u":"R","ref":"501017039","precio":6000},
+  {"n":"Esencia Prodia x 60 vainilla caramelo","c":"esencias","u":"R","ref":"501017040","precio":5000},
+  {"n":"Esencia Prodia vainilla blanca x garrafa","c":"esencias","u":"R","ref":"501017042","precio":120000},
+  {"n":"Esencia Prodia red velvet x 500","c":"esencias","u":"R","ref":"501017044","precio":25700},
+  {"n":"Esencia Prodia x 60 chocolate","c":"esencias","u":"R","ref":"501017049","precio":5000},
+  {"n":"Esencia Prodia arequipe x garrafa","c":"esencias","u":"R","ref":"501017052","precio":120000},
+  {"n":"Esencia Prodia x 20 litros arequipe","c":"esencias","u":"R","ref":"501017057","precio":360000},
+  {"n":"Esencia Prodia x 500 cc almendra","c":"esencias","u":"R","ref":"501017060","precio":18000},
+  {"n":"Esencia Prodia x 500 cc limon","c":"esencias","u":"R","ref":"501017063","precio":15500},
+  {"n":"Esencia sabores surtidos x garrafa","c":"esencias","u":"R","ref":"501041020","precio":49000},
+  {"n":"Esencia tropisabor x 500 mantequilla","c":"esencias","u":"R","ref":"501092001","precio":9000},
+  {"n":"Esencia tropisabor x 500 coco","c":"esencias","u":"R","ref":"501092002","precio":8400},
+  {"n":"Esencia tropisabor x 500 vainilla blanca","c":"esencias","u":"R","ref":"501092003","precio":9000},
+  {"n":"Esencia tropisabor x 500 queso","c":"esencias","u":"R","ref":"501092004","precio":9000},
+  {"n":"Esencia tropisabor x 500 vainilla negra","c":"esencias","u":"R","ref":"501092005","precio":8400},
+  {"n":"Esencia tropisabor x 500 hinojo","c":"esencias","u":"R","ref":"501092009","precio":9000},
+  {"n":"Esencia tropisabor x 500 arequipe","c":"esencias","u":"R","ref":"501092012","precio":8400},
+  {"n":"Esencia tropisabor x 60 frutas maceradas","c":"esencias","u":"R","ref":"501092014","precio":1700},
+  {"n":"Esencia tres leche Prodisabor x 500","c":"esencias","u":"R","ref":"501092016","precio":13400},
+  {"n":"Esencia arequipe x 3850 garrafa Prodisabor","c":"esencias","u":"R","ref":"501092019","precio":70000},
+  {"n":"Esencia ecosabor vainilla blanca x 20 lts","c":"esencias","u":"R","ref":"501092026","precio":138000},
+  {"n":"Esencia Prodisabor x 60 vainilla blanca","c":"esencias","u":"R","ref":"501092040","precio":3200},
+  {"n":"Esencia leche condensada x 500 tropisabor","c":"esencias","u":"R","ref":"501092044","precio":9300},
+  {"n":"Fruta cristalizada x 2.5 kg Coburgos","c":"frutos","u":"PR","ref":"600013001","precio":36000},
+  {"n":"Fruta cristalizada x 1 kg Coburgos","c":"frutos","u":"PR","ref":"600013003","precio":14300},
+  {"n":"Fruta cristalizada x 2.5 kg Fleischmann","c":"frutos","u":"PR","ref":"600041001","precio":37000},
+  {"n":"Piña en trocitos x 3 kg Frusant x 3 kilos","c":"frutos","u":"PR","ref":"1600009003","precio":18500},
+  {"n":"Breva Frusant *1000","c":"frutos","u":"PR","ref":"202009006","precio":15000},
+  {"n":"Ajonjoli x libra","c":"frutos","u":"PR","ref":"100004006","precio":18000},
+  {"n":"Semilla de chia * 250 gramos","c":"frutos","u":"PR","ref":"1801004002","precio":10000},
+  {"n":"Mani con arandanos x 500","c":"frutos","u":"PR","ref":"1801004003","precio":13000},
+  {"n":"Ajonjoli negro bulto x 25 kg","c":"frutos","u":"PR","ref":"601004025","precio":870000},
+  {"n":"Nuez moscada molida Bonniato x 500 gr","c":"frutos","u":"PR","ref":"601096001","precio":88700},
+  {"n":"Nuez del brasil partida x 500","c":"frutos","u":"PR","ref":"601004003","precio":27000},
+  {"n":"Nuez del brasil x 20 kilos","c":"frutos","u":"PR","ref":"601004008","precio":1670000},
+  {"n":"Ajonjoli negro x 500 gr","c":"frutos","u":"PR","ref":"601004017","precio":32000},
+  {"n":"Macadamia x 250","c":"frutos","u":"PR","ref":"601004024","precio":26000},
+  {"n":"Ajonjoli x granel","c":"frutos","u":"PR","ref":"100004005","precio":33,"granel":1},
+  {"n":"Semilla de amapola x 500 gr","c":"frutos","u":"PR","ref":"1801004001","precio":37000},
+  {"n":"Piña en rodajas x 565 gr 3a","c":"frutos","u":"PR","ref":"302004010","precio":13000},
+  {"n":"Mani triturado tostado x 1 kg 3a","c":"frutos","u":"PR","ref":"601004001","precio":20400},
+  {"n":"Nuez moscada x un pepa","c":"frutos","u":"PR","ref":"601004007","precio":1500},
+  {"n":"Semilla de chia x 25 kg","c":"frutos","u":"PR","ref":"601004015","precio":961000},
+  {"n":"Albaricoque- duraznos * 500","c":"frutos","u":"PR","ref":"0","precio":35000},
+  {"n":"Gragea #2 premium Orquidea","c":"decoracion","u":"R","ref":"70101003","precio":20000},
+  {"n":"Perla # 8 azul rey","c":"decoracion","u":"R","ref":"70101010","precio":40800},
+  {"n":"Perla # 8 fuscia 70101011","c":"decoracion","u":"R","ref":"70101011","precio":30000},
+  {"n":"Perla # 4 unicornio 70101013","c":"decoracion","u":"R","ref":"70101013","precio":20000},
+  {"n":"Galletas navidad Italo","c":"decoracion","u":"R","ref":"701019003","precio":4500},
+  {"n":"Galletas Ducales taco x 6 un","c":"decoracion","u":"R","ref":"701033001","precio":17700},
+  {"n":"Galletas Ducales taco x 10","c":"decoracion","u":"R","ref":"701033002","precio":27800},
+  {"n":"Galleta Recreo triturada x 12.5 kg","c":"decoracion","u":"R","ref":"701065003","precio":285000},
+  {"n":"Gelatina limon x 5000 gr Colorisa","c":"rellenos","u":"PR","ref":"700016003","precio":123000},
+  {"n":"Gelatina piña x 5000 gr Colorisa","c":"rellenos","u":"PR","ref":"700016004","precio":123000},
+  {"n":"Gelatina cereza x 5000 gr Colorisa","c":"rellenos","u":"PR","ref":"700016005","precio":119000},
+  {"n":"Gelatina uva x 5000 gr Colorisa","c":"rellenos","u":"PR","ref":"700016007","precio":123000},
+  {"n":"Gelatina mora azul x 5000 gr Colorisa","c":"rellenos","u":"PR","ref":"700016010","precio":123000},
+  {"n":"Gelatina naranja x 5000 gr Colorisa","c":"rellenos","u":"PR","ref":"700016012","precio":123000},
+  {"n":"Gelatina mora x 5000 gr Colorisa","c":"rellenos","u":"PR","ref":"700016013","precio":123000},
+  {"n":"Gelatina sin sabor a granel Colorisa (tipo d)","c":"rellenos","u":"PR","ref":"701004002","precio":50,"granel":1},
+  {"n":"Gelatina sabores surtidos x 5000 gr Gelhada","c":"rellenos","u":"PR","ref":"700032003","precio":58000},
+  {"n":"Glasse neutro x 1 kg Frusant","c":"azucares","u":"PR","ref":"702004004","precio":9300},
+  {"n":"Glasse mora Frusant x kilo","c":"azucares","u":"PR","ref":"702005008","precio":8000},
+  {"n":"Glasse fresa x 4 k Prodisabor","c":"azucares","u":"PR","ref":"702045002","precio":30000},
+  {"n":"Glasse fresa x 1k Prodisabor","c":"azucares","u":"PR","ref":"702092001","precio":9300},
+  {"n":"Glasse neutro Prodisabor x kilo","c":"azucares","u":"PR","ref":"702092003","precio":9500},
+  {"n":"Glasse kiwi x 1k Prodisabor","c":"azucares","u":"PR","ref":"702092005","precio":9300},
+  {"n":"Glasse maracuya x 1 kg Prodisabor","c":"azucares","u":"PR","ref":"702092007","precio":9500},
+  {"n":"Glicerina USP Carolesen 626 gr","c":"levaduras","u":"P","ref":"704016002","precio":23000},
+  {"n":"Gragea #2 premium san valentin","c":"decoracion","u":"R","ref":"70101001","precio":20000},
+  {"n":"Gragea #2 premium mix plateada","c":"decoracion","u":"R","ref":"70101002","precio":20000},
+  {"n":"Gragea #2 premium mix dorada","c":"decoracion","u":"R","ref":"70101004","precio":20000},
+  {"n":"Gragea #2 premium chic","c":"decoracion","u":"R","ref":"70101005","precio":20000},
+  {"n":"Gragea #2 premium diva","c":"decoracion","u":"R","ref":"70101006","precio":20000},
+  {"n":"Gragea #2 premium mimosa","c":"decoracion","u":"R","ref":"70101007","precio":20000},
+  {"n":"Perla # 8 plateada 70101008","c":"decoracion","u":"R","ref":"70101008","precio":47000},
+  {"n":"Perla # 8 roja","c":"decoracion","u":"R","ref":"70101009","precio":30000},
+  {"n":"Perla # 8 ocre","c":"decoracion","u":"R","ref":"70101012","precio":30000},
+  {"n":"Perla # 4 blanca","c":"decoracion","u":"R","ref":"70101015","precio":28800},
+  {"n":"Perla # 4 roja","c":"decoracion","u":"R","ref":"70101017","precio":20000},
+  {"n":"Gragea # 2 plateada","c":"decoracion","u":"R","ref":"70101019","precio":47000},
+  {"n":"Gragea de colores x kilo","c":"decoracion","u":"R","ref":"703019001","precio":22000},
+  {"n":"Gragea de colores x 3000gr Italo","c":"decoracion","u":"R","ref":"703019003","precio":60500},
+  {"n":"Grageas finas de colores Italo x 500 fina","c":"decoracion","u":"R","ref":"703019005","precio":5300},
+  {"n":"Grageas alian x 500 gr","c":"decoracion","u":"R","ref":"703075001","precio":5700},
+  {"n":"Grageas corazon hueco","c":"decoracion","u":"R","ref":"703037001","precio":72000},
+  {"n":"Gragea estrella dorada x 2000 gr","c":"decoracion","u":"R","ref":"703037006","precio":227600},
+  {"n":"Gragea estrella plateada X2000","c":"decoracion","u":"R","ref":"703037007","precio":227600},
+  {"n":"Gragea mix pastel corazon x 2000 gr","c":"decoracion","u":"R","ref":"703037009","precio":227600},
+  {"n":"Grageas confeti fuerte","c":"decoracion","u":"R","ref":"703075002","precio":70000},
+  {"n":"Perla # 6 plateada","c":"decoracion","u":"R","ref":"703015001","precio":11600},
+  {"n":"Perla dorada N° 6","c":"decoracion","u":"R","ref":"1801077017","precio":52000},
+  {"n":"Perla variadas N° 2","c":"decoracion","u":"R","ref":"1801077021","precio":21000},
+  {"n":"Perla N° 6 variadas","c":"decoracion","u":"R","ref":"1801077057","precio":39000},
+  {"n":"Gragea copos de nieve","c":"decoracion","u":"R","ref":"703063003","precio":70000},
+  {"n":"Grageas navidad variadas","c":"decoracion","u":"R","ref":"703999001","precio":64000},
+  {"n":"Grageas ojos mediano x libra","c":"decoracion","u":"R","ref":"703999007","precio":100000},
+  {"n":"Perlas N° 8 variadas","c":"decoracion","u":"R","ref":"900999065","precio":40000},
+  {"n":"Grageas corazon mickey mouse x 20 gr","c":"decoracion","u":"R","ref":"703999003","precio":1600},
+  {"n":"Harina pastelera refinada x 50 kilos","c":"harinas","u":"PR","ref":"800102001","precio":172000},
+  {"n":"Base para merengue Fleischmann x 1.5 kg tarro","c":"harinas","u":"PR","ref":"800041001","precio":78000},
+  {"n":"Harina de almendra x 500 gr","c":"harinas","u":"PR","ref":"800010209","precio":30000},
+  {"n":"Harina insuperable repostera x 50 k","c":"harinas","u":"PR","ref":"800020003"},
+  {"n":"Harina corriente x 50 kilos Paspan","c":"harinas","u":"PR","ref":"800020004","precio":112000},
+  {"n":"Harina Corona premium x 25 kilos","c":"harinas","u":"PR","ref":"8000740001","precio":85900},
+  {"n":"Harina La Nieve corriente x 50 kg","c":"harinas","u":"PR","ref":"800058001","precio":117000},
+  {"n":"Harina La Nieve pastelera premium x 50 kg","c":"harinas","u":"PR","ref":"800058002","precio":112400},
+  {"n":"Harina la Monjita x 50 kg mm","c":"harinas","u":"PR","ref":"800088001","precio":161400},
+  {"n":"Harina de almendra x 11,34 kg","c":"harinas","u":"PR","ref":"800085008","precio":563000},
+  {"n":"Harina Elite reposteria x 50 kg","c":"harinas","u":"PR","ref":"130308000","precio":185000},
+  {"n":"Harina Elite empacada de kilo","c":"harinas","u":"PR","ref":"800085012","precio":4700},
+  {"n":"Harina vital bran grano entero x 25 kg","c":"harinas","u":"PR","ref":"800085018","precio":103800},
+  {"n":"Harina Elite reposteria x 25 kg","c":"harinas","u":"PR","ref":"800086004"},
+  {"n":"Harina Elite para pizza x 2,5 kg","c":"harinas","u":"PR","ref":"800086005","precio":12000},
+  {"n":"Harina Elite repostera * 2,5kg","c":"harinas","u":"PR","ref":"800086006","precio":12500},
+  {"n":"Harina Tres Castillos cte x 50 kg","c":"harinas","u":"PR","ref":"800085001","precio":112000},
+  {"n":"Harina tres castillo empacada de kilo","c":"harinas","u":"PR","ref":"800085011","precio":3000},
+  {"n":"Harina total gran integral x 25 kg","c":"harinas","u":"PR","ref":"800085013","precio":96000},
+  {"n":"Harina Tres Castillos x 25 kg","c":"harinas","u":"PR","ref":"800085016","precio":66500},
+  {"n":"Harina vitalbran multigranos x 12,5 kg","c":"harinas","u":"PR","ref":"800085017","precio":193000},
+  {"n":"Harina vitalbran x 2,5 kg","c":"harinas","u":"PR","ref":"800085020","precio":7000},
+  {"n":"Harina Robinson integral x kilo","c":"harinas","u":"PR","ref":"800049004","precio":3500},
+  {"n":"Harina Robinson repostera azul x 25 kg","c":"harinas","u":"PR","ref":"800049005","precio":96600},
+  {"n":"Harina san miguel ricaharina x 50 kg","c":"harinas","u":"PR","ref":"800049006","precio":80000},
+  {"n":"Harina pardo x 25 kilos","c":"harinas","u":"PR","ref":"800049008"},
+  {"n":"Harina multiceral Robinson * 5 kilos","c":"harinas","u":"PR","ref":"800049010","precio":77500},
+  {"n":"Harina integral Robinson * 12 kilos","c":"harinas","u":"PR","ref":"800049011","precio":60000},
+  {"n":"Harina Robinson repostera rosada * 25 kilos","c":"harinas","u":"PR","ref":"800049012","precio":96500},
+  {"n":"Hyvol merengue x 4 lb Rich","c":"rellenos","u":"PR","ref":"801038001","precio":147000},
+  {"n":"Leche en polvo Coolechera x 25kg","c":"rellenos","u":"PR","ref":"1202058003"},
+  {"n":"Leche entera","c":"rellenos","u":"PR","ref":"1202018001","precio":4500},
+  {"n":"Leche condensada Gloria x 396","c":"rellenos","u":"PR","ref":"309097006","precio":8600},
+  {"n":"Leche condensada x 5000gr la Bugueña","c":"rellenos","u":"PR","ref":"1200005003","precio":79000},
+  {"n":"Leche condensada x 1kg la Bugueña","c":"rellenos","u":"PR","ref":"1200005005","precio":18500},
+  {"n":"Leche condensada x 5 kilos la vaquita melosa","c":"rellenos","u":"PR","ref":"1200107001","precio":46000},
+  {"n":"Leche condensada x 1,0 kilos la vaquita melosa","c":"rellenos","u":"PR","ref":"1200107003","precio":11200},
+  {"n":"Leche condensada Pastelfrut x 5 kg","c":"rellenos","u":"PR","ref":"1200045001","precio":47000},
+  {"n":"Leche condensada Pastelfrut bolson","c":"rellenos","u":"PR","ref":"1200045002","precio":37500},
+  {"n":"Leche condensada manga Pastelfrut x 1 kg","c":"rellenos","u":"PR","ref":"1200045003","precio":10000},
+  {"n":"Leche condensada economica Pastelfrut x 5 kg","c":"rellenos","u":"PR","ref":"1200045004","precio":39000},
+  {"n":"Levadura instan fleischm x 500 mauripan","c":"levaduras","u":"P","ref":"1201041001","precio":12700},
+  {"n":"Levadura fresca Fleischman x 500 barra","c":"levaduras","u":"P","ref":"1201041010","precio":6800},
+  {"n":"Levadura instantanea sucess x 500gr","c":"levaduras","u":"P","ref":"1201022001","precio":12700},
+  {"n":"Levadura fresca x 500 gr Levapan","c":"levaduras","u":"P","ref":"1201003001","precio":4300},
+  {"n":"Libro comer sano","c":"utensilios","u":"PR","ref":"1202999002","precio":8000},
+  {"n":"Libro menu infantil","c":"utensilios","u":"PR","ref":"1202999003","precio":8000},
+  {"n":"Libro recetas de la abuela","c":"utensilios","u":"PR","ref":"1202999005","precio":8000},
+  {"n":"Mantequilla Colanta sin sal x 250 gr","c":"grasas","u":"PR","ref":"1300018001","precio":14000},
+  {"n":"Mantequilla Colanta sin sal x 500 gr","c":"grasas","u":"PR","ref":"1300018003","precio":28200},
+  {"n":"Margarina superior industria exelencia x 15 kilos","c":"grasas","u":"PR","ref":"1300107002","precio":79400},
+  {"n":"Margarina masaplus hojaldre x 15 kls","c":"grasas","u":"PR","ref":"1300041008","precio":118000},
+  {"n":"Margarina extratodo uso masa plus x 15 kg","c":"grasas","u":"PR","ref":"1300051003","precio":113200},
+  {"n":"Tupan x 15kg","c":"grasas","u":"PR","ref":"1300090001","precio":86000},
+  {"n":"Margarina Elite x 15 kilos","c":"grasas","u":"PR","ref":"1300090002","precio":136000},
+  {"n":"Margarina industrial cremosa Oleoflor","c":"grasas","u":"PR","ref":"1300090008","precio":127000},
+  {"n":"Solido Oleoflor rendidora x 15kilos","c":"grasas","u":"PR","ref":"1300090009","precio":148000},
+  {"n":"Vitina hojaldre x 2.5 x 6 un","c":"grasas","u":"PR","ref":"1300024001","precio":168000},
+  {"n":"Astra x 15 kg verde","c":"grasas","u":"PR","ref":"1300024002","precio":146800},
+  {"n":"Astra verde empacada de kilo","c":"grasas","u":"PR","ref":"1300024008","precio":160000},
+  {"n":"Tulicrem x 15 kg","c":"grasas","u":"PR","ref":"1300024010","precio":189000},
+  {"n":"Hojalpan x 15 kg x 2.5","c":"grasas","u":"PR","ref":"1300024012","precio":154500},
+  {"n":"Flamela x 1 kg","c":"grasas","u":"PR","ref":"1300024020","precio":10000},
+  {"n":"Hojalpan x 10 kg","c":"grasas","u":"PR","ref":"1300024021","precio":105000},
+  {"n":"Vitina hojaldre x 10 kg x 20 unid 500 gr","c":"grasas","u":"PR","ref":"1300024023","precio":111700},
+  {"n":"Flamela-grasa hidrogenada caja x 15 kg","c":"grasas","u":"PR","ref":"1300024027","precio":137000},
+  {"n":"Maria hojaldre* cj * 20 und","c":"grasas","u":"PR","ref":"1300028008","precio":102000},
+  {"n":"Mantequilla la buena * 500","c":"grasas","u":"PR","ref":"1300018002","precio":8000},
+  {"n":"5a margarina x 15 kg industrial","c":"grasas","u":"PR","ref":"130026001","precio":138000},
+  {"n":"Dagusto reposteria x 15 kg","c":"grasas","u":"PR","ref":"1300025001","precio":169700},
+  {"n":"Gourmet hojaldre x 15 kg team","c":"grasas","u":"PR","ref":"1300043001","precio":151500},
+  {"n":"Hojaldrina x 15 kg x 500 gr","c":"grasas","u":"PR","ref":"1300027001","precio":134000},
+  {"n":"Mejorador Fleischman maxipan x 1 kg (bulto*16)","c":"levaduras","u":"P","ref":"1301041002","precio":20000},
+  {"n":"Mermelada durazno amy x 5 kg","c":"rellenos","u":"PR","ref":"1302093001","precio":36400},
+  {"n":"Mermelada de durazno x 5 kilos Prodisabor","c":"rellenos","u":"PR","ref":"1302093003","precio":70000},
+  {"n":"Mermelada piña Prodisabor","c":"rellenos","u":"PR","ref":"1302093004","precio":70000},
+  {"n":"Molde muffin liso N° 4 fm x 12 un","c":"utensilios","u":"PR","ref":"1303078001","precio":27000},
+  {"n":"Molde muffin liso N° 4 fm x 24 un","c":"utensilios","u":"PR","ref":"1303078002","precio":49000},
+  {"n":"Molde redondo fm 2 lb (33 cm)","c":"utensilios","u":"PR","ref":"1303078004","precio":20000},
+  {"n":"Molde redondo fm 1 1/2 lb (30 cm )","c":"utensilios","u":"PR","ref":"1303078005","precio":14700},
+  {"n":"Molde redondo fm 1 lb 26 cm","c":"utensilios","u":"PR","ref":"1303078006","precio":17000},
+  {"n":"Molde redondo fm 1/2 lb 22 cm","c":"utensilios","u":"PR","ref":"1303078007","precio":16000},
+  {"n":"Molde redondo fm 1/4 lb 19 cm","c":"utensilios","u":"PR","ref":"1303078008","precio":16500},
+  {"n":"Molde cuadrado fm 2 lb","c":"utensilios","u":"PR","ref":"1303078009","precio":20000},
+  {"n":"Molde cuadrado fm 1 1/2 lb","c":"utensilios","u":"PR","ref":"1303078010","precio":19000},
+  {"n":"Molde cuadrado fm 1 lb","c":"utensilios","u":"PR","ref":"1303078011","precio":18000},
+  {"n":"Molde cuadrado fm 1/2 lb","c":"utensilios","u":"PR","ref":"1303078012","precio":16000},
+  {"n":"Molde cuadrado fm 1/4 lb","c":"utensilios","u":"PR","ref":"1303078013","precio":12000},
+  {"n":"Molde rectangular fm 2 lb","c":"utensilios","u":"PR","ref":"1303078014","precio":16000},
+  {"n":"Molde rectangular fm 1 1/2 lb","c":"utensilios","u":"PR","ref":"1303078015","precio":16000},
+  {"n":"Molde rectangular fm 1 lb","c":"utensilios","u":"PR","ref":"1303078016","precio":12400},
+  {"n":"Molde rectangular fm 1/2 lb","c":"utensilios","u":"PR","ref":"1303078017","precio":11000},
+  {"n":"Lata casera fm 35x35 cm","c":"utensilios","u":"PR","ref":"1303078019","precio":23000},
+  {"n":"Lata casera fm 40 x 32 cm","c":"utensilios","u":"PR","ref":"1303078020","precio":21000},
+  {"n":"Molde redondo pequeño fm 8x3 cm","c":"utensilios","u":"PR","ref":"1303078023","precio":1800},
+  {"n":"Lata larga fm 82x42 fm","c":"utensilios","u":"PR","ref":"1303078025","precio":65800},
+  {"n":"Molde corazon fm 1 lb","c":"utensilios","u":"PR","ref":"1303078026","precio":20200},
+  {"n":"Molde corazon fm 1/2 lb","c":"utensilios","u":"PR","ref":"1303078027","precio":18600},
+  {"n":"Molde corazon 1/4 lb","c":"utensilios","u":"PR","ref":"1303078028","precio":17000},
+  {"n":"Molde redondo pequeño 7x12 cm minitorta fm","c":"utensilios","u":"PR","ref":"1303078029","precio":10000},
+  {"n":"Molde de pizza fm # 50","c":"utensilios","u":"PR","ref":"1303078031","precio":34000},
+  {"n":"Molde de pizza fm # 33","c":"utensilios","u":"PR","ref":"1303078033","precio":18600},
+  {"n":"Molde redondo pequeño fm 4x12 cm r","c":"utensilios","u":"PR","ref":"1303078037","precio":9000},
+  {"n":"Molde redondo fm 2 lb alto","c":"utensilios","u":"PR","ref":"1303078038","precio":16500},
+  {"n":"Molde redondo fm 1.5 lb alto","c":"utensilios","u":"PR","ref":"1303078039","precio":17000},
+  {"n":"Molde redondo fm 1/4 lb (18 cm)","c":"utensilios","u":"PR","ref":"1303078042","precio":15000},
+  {"n":"Molde muffin liso N° 4 fm x 6 un","c":"utensilios","u":"PR","ref":"1303078043","precio":12300},
+  {"n":"Lata casera 30*40 brawnie","c":"utensilios","u":"PR","ref":"130307826","precio":25000},
+  {"n":"Molde flor x 1/4 lb","c":"utensilios","u":"PR","ref":"1303084007","precio":17000},
+  {"n":"Molde flor x 1 lb","c":"utensilios","u":"PR","ref":"1303084009","precio":20100},
+  {"n":"Molde flor fm 1/2","c":"utensilios","u":"PR","ref":"1303084012","precio":18500},
+  {"n":"Molde de libro 1/4","c":"utensilios","u":"PR","ref":"1303084014","precio":17000},
+  {"n":"Molde camisa lb","c":"utensilios","u":"PR","ref":"1303084015","precio":20000},
+  {"n":"Molde camisa 1/2","c":"utensilios","u":"PR","ref":"1303084016","precio":18500},
+  {"n":"Molde camisa 1/4","c":"utensilios","u":"PR","ref":"1303084017","precio":17000},
+  {"n":"Molde esfera #8","c":"utensilios","u":"PR","ref":"1303084018","precio":6000},
+  {"n":"Molde esfera # 12","c":"utensilios","u":"PR","ref":"1303084019","precio":8000},
+  {"n":"Molde esfera # 16","c":"utensilios","u":"PR","ref":"1303084020","precio":11000},
+  {"n":"Molde pene lb","c":"utensilios","u":"PR","ref":"1303084021","precio":20000},
+  {"n":"Molde desmoldable # 14","c":"utensilios","u":"PR","ref":"1303084022","precio":18000},
+  {"n":"Molde desmoldable # 16","c":"utensilios","u":"PR","ref":"1303084023","precio":19000},
+  {"n":"Molde desmoldable # 18","c":"utensilios","u":"PR","ref":"1303084024","precio":21000},
+  {"n":"Molde libro libra","c":"utensilios","u":"PR","ref":"1303084025","precio":20000},
+  {"n":"Molde libro 1/2","c":"utensilios","u":"PR","ref":"1303084026","precio":18500},
+  {"n":"Lata troqueladas 65* 45","c":"utensilios","u":"PR","ref":"1303084030","precio":40000},
+  {"n":"Molde cilindrinco lb","c":"utensilios","u":"PR","ref":"1303084031","precio":20000},
+  {"n":"Molde cilindrico 1/4","c":"utensilios","u":"PR","ref":"1303084033","precio":4000},
+  {"n":"Molde pan tajado fm 12 oz (30 x 10 x 9)","c":"utensilios","u":"PR","ref":"900037047","precio":20000},
+  {"n":"Molde hueco libra","c":"utensilios","u":"PR","ref":"900037092","precio":22000},
+  {"n":"Molde quesillero 19","c":"utensilios","u":"PR","ref":"900037096","precio":20000},
+  {"n":"Molde quesillero 17","c":"utensilios","u":"PR","ref":"900037097","precio":15000},
+  {"n":"Molde quesillero 15","c":"utensilios","u":"PR","ref":"900037098","precio":12000},
+  {"n":"Molde hueco 1/2 fm","c":"utensilios","u":"PR","ref":"900037099","precio":20400},
+  {"n":"Molde hueco 1/4 fm","c":"utensilios","u":"PR","ref":"900037100","precio":19000},
+  {"n":"Molde paleta silicona x 4 COLR40-5/ COLR40-4/ COLR40-6","c":"utensilios","u":"PR","ref":"1303080001","precio":11000},
+  {"n":"Molde paleta redonda 110 g 34,5*12,5*2,5 cm COLR40-9","c":"utensilios","u":"PR","ref":"1303080002","precio":15000},
+  {"n":"Molde postre y helados paleta honda x 4 uds prf. 2,5cm COLR19-257","c":"utensilios","u":"PR","ref":"1303080003","precio":20000},
+  {"n":"Molde corazon doble bombon x 6 und prof 1cm/3,5 cm *5 c, COLR19-310","c":"utensilios","u":"PR","ref":"1303080005","precio":18700},
+  {"n":"Molde acetato conejo diamante 3 partes","c":"utensilios","u":"PR","ref":"900999281","precio":20000},
+  {"n":"Molde acetato numero doble","c":"utensilios","u":"PR","ref":"900999284","precio":12000},
+  {"n":"Molde acetato alfabeto pequeño","c":"utensilios","u":"PR","ref":"900999285","precio":12000},
+  {"n":"Molde ponque mickey x 1/2 lb","c":"utensilios","u":"PR","ref":"1303084001","precio":43000},
+  {"n":"Molde ponque hello kitty x 1/2 lb","c":"utensilios","u":"PR","ref":"1303084002","precio":43000},
+  {"n":"Oblea mediana","c":"decoracion","u":"R","ref":"1500999002","precio":3500},
+  {"n":"Pellets de trigo 4 x 4 a bulto x 15 kg","c":"harinas","u":"PR","ref":"311057010","precio":221000},
+  {"n":"Pellets de trigo tubo grande bulto x 15 kg","c":"harinas","u":"PR","ref":"311057016","precio":183000},
+  {"n":"Pellets de trigo mixto bulto x 15 kg","c":"harinas","u":"PR","ref":"311057019","precio":178000},
+  {"n":"Pellets de trigo mixto x 15 kilos","c":"harinas","u":"PR","ref":"311057020","precio":178000},
+  {"n":"Polvo para hornear x 1 kg Coburgos","c":"levaduras","u":"P","ref":"1601013003","precio":10000},
+  {"n":"Polvo para hornear Fleischman x 1 kg (bulto *24)","c":"levaduras","u":"P","ref":"1601041001","precio":18500},
+  {"n":"Polvo para hornear incolsa x 1 kg","c":"levaduras","u":"P","ref":"1601051001","precio":14500},
+  {"n":"Kit premezcla paneton x 2,5 gr copasan","c":"harinas","u":"PR","ref":"1602041007","precio":42000},
+  {"n":"Almidon expandex x 12 kg colmaiz","c":"harinas","u":"PR","ref":"1602029001","precio":151500},
+  {"n":"Buñuelo x 12 kg colmaiz","c":"harinas","u":"PR","ref":"1602029002","precio":84000},
+  {"n":"Pan de yuca x 12 kg colmaiz","c":"harinas","u":"PR","ref":"1602029004","precio":151000},
+  {"n":"Pan de bono x 12 kg colmaiz","c":"harinas","u":"PR","ref":"1602029005","precio":146000},
+  {"n":"Fecula x 12 kg corrumex","c":"harinas","u":"PR","ref":"1602029006","precio":56000},
+  {"n":"Pan de yuca empacado x kilo","c":"harinas","u":"PR","ref":"1602029012","precio":15000},
+  {"n":"Buñuelo x 25 kg emp x 1kg colmaiz","c":"harinas","u":"PR","ref":"1602029014","precio":176000},
+  {"n":"Pan de bono x 25 kg emp x 1 kg colmaiz","c":"harinas","u":"PR","ref":"1602029015","precio":340000},
+  {"n":"Fecula x 25 kg corrumex","c":"harinas","u":"PR","ref":"1602029016","precio":111000},
+  {"n":"Buñuelo x 500gr colmaiz","c":"harinas","u":"PR","ref":"1602029022","precio":4300},
+  {"n":"Premezcla brownie Fleischman x 2.5 kg","c":"harinas","u":"PR","ref":"1602041001","precio":52500},
+  {"n":"Premezcla donuts Fleischman x 2,5","c":"harinas","u":"PR","ref":"1602041009","precio":36000},
+  {"n":"Premezcla chocolate Richs x 13.6 kg","c":"harinas","u":"PR","ref":"1602038001","precio":184600},
+  {"n":"Premezcla de galleta Richs","c":"harinas","u":"PR","ref":"1602038004","precio":40000},
+  {"n":"Premezcla chocolate Richs x 2,5kg","c":"harinas","u":"PR","ref":"1602038007","precio":46000},
+  {"n":"Premezcla vainilla Richs x 2,5kg","c":"harinas","u":"PR","ref":"1602038008","precio":38000},
+  {"n":"Queso crema Colanta x 400","c":"rellenos","u":"PR","ref":"1700018003","precio":10000},
+  {"n":"Relleno de mora Frusant x 1kg","c":"rellenos","u":"PR","ref":"1800038008","precio":8000},
+  {"n":"Relleno de maracuya Frusant * 1 kilo","c":"rellenos","u":"PR","ref":"1800038009","precio":8000},
+  {"n":"Relleno de durazno Frusant * kilo","c":"rellenos","u":"PR","ref":"1800038011","precio":8000},
+  {"n":"Relleno x kilo mora Bugueña","c":"rellenos","u":"PR","ref":"702005006","precio":8000},
+  {"n":"Relleno fresa x 4 kg Prodisabor","c":"rellenos","u":"PR","ref":"1800092001","precio":40000},
+  {"n":"Relleno de fresa x 1 kg prodisa","c":"rellenos","u":"PR","ref":"1800092002","precio":13800},
+  {"n":"Relleno de mora x 1 kg prodisa","c":"rellenos","u":"PR","ref":"1800092004","precio":10500},
+  {"n":"Rodillo profesional 23cm *2","c":"utensilios","u":"PR","ref":"900999291","precio":52000},
+  {"n":"Rodillo profesional 23cm *3","c":"utensilios","u":"PR","ref":"900999292","precio":58000},
+  {"n":"Rodillo profesional 37cm *2","c":"utensilios","u":"PR","ref":"900999293","precio":77000},
+  {"n":"Rodillo profesional 37cm *3","c":"utensilios","u":"PR","ref":"900999294","precio":85000},
+  {"n":"Rodillo profesional 47cm *2","c":"utensilios","u":"PR","ref":"900999295","precio":84000},
+  {"n":"Rodillo profesional 47cm *3","c":"utensilios","u":"PR","ref":"900999296","precio":91000},
+  {"n":"Boquilla de pasto","c":"utensilios","u":"PR","ref":"1801080073","precio":5000},
+  {"n":"Gragea#2 mezcla amor","c":"decoracion","u":"R","ref":"70101021","precio":19000},
+  {"n":"Gragea #2 blanca blanca #2","c":"decoracion","u":"R","ref":"70101022","precio":28800},
+  {"n":"Perla #4 plateada","c":"decoracion","u":"R","ref":"70101023","precio":23400},
+  {"n":"Perla # 4 azul oscuro","c":"decoracion","u":"R","ref":"70101031","precio":27000},
+  {"n":"Perla # 8 blanca","c":"decoracion","u":"R","ref":"70101033","precio":43800},
+  {"n":"Perla # 4 ocre","c":"decoracion","u":"R","ref":"70101035"},
+  {"n":"Cuchara medidora","c":"utensilios","u":"PR","ref":"900999270","precio":11000},
+  {"n":"Apliques para tortas","c":"decoracion","u":"R","ref":"1801105007","precio":5000},
+  {"n":"Apliques de madera","c":"decoracion","u":"R","ref":"1801105008"},
+  {"n":"Molde muffin silicona navidad","c":"utensilios","u":"PR","ref":"1801105009","precio":23000},
+  {"n":"Molde silicona chocolate navidad joy","c":"utensilios","u":"PR","ref":"1801105010","precio":12000},
+  {"n":"Bowl plastico color lila 28,5","c":"utensilios","u":"PR","ref":"1801105015","precio":35000},
+  {"n":"Bowl acero inoxidable 26*9,5","c":"utensilios","u":"PR","ref":"1801105016","precio":34000},
+  {"n":"Crema de leche Colanta","c":"rellenos","u":"PR","ref":"309018003","precio":18000},
+  {"n":"Papel parafinado impreso cuadrados 30*30","c":"empaques","u":"PR","ref":"1801089003","precio":130},
+  {"n":"Escarcha roja x 50 gr","c":"decoracion","u":"R","ref":"900067046","precio":15000},
+  {"n":"Figura en fondant peq-med.","c":"decoracion","u":"R","ref":"1801105001","precio":3500},
+  {"n":"Disco plateado ondulado1/4","c":"empaques","u":"PR","ref":"402072017","precio":1200},
+  {"n":"Disco plateado ondulado lb","c":"empaques","u":"PR","ref":"402072019","precio":3600},
+  {"n":"Disco plateado ondulado 1 1/2","c":"empaques","u":"PR","ref":"402072020","precio":4500},
+  {"n":"Disco plateado ondulado 2 libras","c":"empaques","u":"PR","ref":"402072021","precio":5600},
+  {"n":"Disco plateado redondo 1/4","c":"empaques","u":"PR","ref":"402072022","precio":1300},
+  {"n":"Disco plateado redondo 1/2","c":"empaques","u":"PR","ref":"402072023","precio":2800},
+  {"n":"Disco plateado redondo lb","c":"empaques","u":"PR","ref":"402072024","precio":4000},
+  {"n":"Disco plateado redondo 1 1/2","c":"empaques","u":"PR","ref":"402072025","precio":5700},
+  {"n":"Disco plateado redondo 2 lb","c":"empaques","u":"PR","ref":"402072026","precio":5200},
+  {"n":"Disco dorado redondo # 20","c":"empaques","u":"PR","ref":"402072027","precio":2000},
+  {"n":"Molde paletas curvas plana x 8 COLR37-290","c":"utensilios","u":"PR","ref":"1303080006","precio":37000},
+  {"n":"Espatula plana ancha acero inoxinable COLR3-30","c":"utensilios","u":"PR","ref":"1801080065","precio":21000},
+  {"n":"Manga pastelera caja pispensadora x 50 und30cm*18cm ancho COLR24-43","c":"utensilios","u":"PR","ref":"1801080067","precio":16000},
+  {"n":"Molde pesebre navidad con estrella x 3 n136 acettato","c":"utensilios","u":"PR","ref":"1801084021","precio":9500},
+  {"n":"Perla # 4 azul turquesa","c":"decoracion","u":"R","ref":"70101029","precio":20000},
+  {"n":"Perla # 8 verde limon","c":"decoracion","u":"R","ref":"70101037","precio":30000},
+  {"n":"Pistola plastica para perlas COLR27-115","c":"decoracion","u":"R","ref":"900091003","precio":7000},
+  {"n":"Hojas y mariposa para cenefas en fondant COLR14-194","c":"decoracion","u":"R","ref":"900999258","precio":39600},
+  {"n":"Cortador miniflor para galleta x 2 un COLR5-23","c":"utensilios","u":"PR","ref":"1801080002","precio":6000},
+  {"n":"Espatula con angulo plana COLR3-31","c":"utensilios","u":"PR","ref":"1801080011","precio":21000},
+  {"n":"Rodillo nivelador fondant 10 cm COLR9-1","c":"decoracion","u":"R","ref":"1801080013","precio":13000},
+  {"n":"Rodillo ajustable para fondant poliestireno COLR9-16","c":"utensilios","u":"PR","ref":"1801080014","precio":18000},
+  {"n":"Marcador de torta con regla COLR11-16","c":"utensilios","u":"PR","ref":"1801080023","precio":17500},
+  {"n":"Molde silicona torta x 6 COLR10-53","c":"utensilios","u":"PR","ref":"1801080024","precio":18000},
+  {"n":"Molde silicona hallowen calavera y huesos COLR39-19","c":"utensilios","u":"PR","ref":"1801080025","precio":7000},
+  {"n":"Estuche cortador galletas sol abeja sandia COLR11","c":"utensilios","u":"PR","ref":"1801080027","precio":13300},
+  {"n":"Molde silicona cupcake pequeño COLR10-54","c":"utensilios","u":"PR","ref":"1801080033","precio":7600},
+  {"n":"Boquilla rusa x un en acero inox","c":"utensilios","u":"PR","ref":"1801080034","precio":7500},
+  {"n":"Molde silicona balones x 4 un diam 7 cm COLR13-62","c":"utensilios","u":"PR","ref":"1801080035","precio":10000},
+  {"n":"Cortador para torta acero inox flor x 3 COLR15-14","c":"utensilios","u":"PR","ref":"1801080043","precio":22000},
+  {"n":"Molde silicona halloween calabaza COLR39-21","c":"utensilios","u":"PR","ref":"1801080044","precio":9500},
+  {"n":"Capacillo surtido # 4 Colorisa x millar","c":"empaques","u":"PR","ref":"1801080048","precio":16000},
+  {"n":"Capacillo flores # 4 Colorisa x millar","c":"empaques","u":"PR","ref":"1801080050","precio":16000},
+  {"n":"Cortador de letras abecedario minuscula x 26 un COLR24-33","c":"utensilios","u":"PR","ref":"1801080051","precio":62000},
+  {"n":"Cola de sirena para figuras en azuacr x 1 un COLR21-168","c":"decoracion","u":"R","ref":"1801080053","precio":18500},
+  {"n":"Boquilla pequella N° 20 COLR7-2","c":"utensilios","u":"PR","ref":"1801080071"},
+  {"n":"Boquilla sultan COLR23-r002 diametro 3,5 cm diametro 2,5 cm","c":"utensilios","u":"PR","ref":"1801080072","precio":5000},
+  {"n":"Molde pastel plastico rombo x 3 piezas alto 19*9 cm ancho/alto 15,5*6,5cm ancho COLR23-034","c":"utensilios","u":"PR","ref":"1801080076","precio":13000},
+  {"n":"Estrellas en circilos geometricos x 6 und COLR31-89","c":"decoracion","u":"R","ref":"1801080078","precio":21000},
+  {"n":"Corazones grandes geometricos *8 un COLR31-289","c":"decoracion","u":"R","ref":"1801080084","precio":20000},
+  {"n":"Barrilitos COLR18-47","c":"decoracion","u":"R","ref":"1801080087","precio":24000},
+  {"n":"Trufa abcedario COLR1-79","c":"decoracion","u":"R","ref":"1801080088","precio":20000},
+  {"n":"Abecedario minuscula COLR10-27","c":"decoracion","u":"R","ref":"1801080089","precio":30000},
+  {"n":"Molde en acero inoxidable donas X12UND","c":"utensilios","u":"PR","ref":"1801080090","precio":35500},
+  {"n":"Molde de azucar unicornio cuerno estrella fugaz COLR31-10","c":"decoracion","u":"R","ref":"1801080091","precio":31500},
+  {"n":"Molde de azucar unicornio bebe cuerno estrella COLR3-241","c":"decoracion","u":"R","ref":"1801080092","precio":12000},
+  {"n":"Molde de azucar implementos vestuario navidad COLR32-26","c":"utensilios","u":"PR","ref":"1801080093","precio":26000},
+  {"n":"Molde silicona barra de chocolate COLR32-18","c":"utensilios","u":"PR","ref":"1801080094","precio":15500},
+  {"n":"Molde de azucar navidad regalo COLR32-48","c":"utensilios","u":"PR","ref":"1801080095","precio":12000},
+  {"n":"Molde de azucar navidad papa noel media luna COLR32-49","c":"utensilios","u":"PR","ref":"1801080096","precio":15500},
+  {"n":"Molde de azucar vavidad hojas frutos cereza COLR32-56","c":"utensilios","u":"PR","ref":"1801080097","precio":10600},
+  {"n":"Molde azucar para fondant globos x 11 un COLR24-68","c":"decoracion","u":"R","ref":"1801080098","precio":15500},
+  {"n":"Base exhibidor para torta COLR19-059","c":"empaques","u":"PR","ref":"1801080102","precio":72500},
+  {"n":"Molde plastico exagono x 3 COLR23-021","c":"utensilios","u":"PR","ref":"1801080105","precio":9000},
+  {"n":"Molde de azucar animales mariposas caracoles COLR28-148","c":"utensilios","u":"PR","ref":"900091007","precio":42000},
+  {"n":"Molde mini torta 3 pisos COLR31-325","c":"utensilios","u":"PR","ref":"900091009","precio":30000},
+  {"n":"Cuerno unicornio 4 cm *10,3 cm COLR31-282","c":"decoracion","u":"R","ref":"900091011","precio":25000},
+  {"n":"Alisador para fondant curva COLR31-338","c":"utensilios","u":"PR","ref":"900091013","precio":12000},
+  {"n":"Cortador numero inoxidable COLR18-40","c":"utensilios","u":"PR","ref":"900999256","precio":16000},
+  {"n":"Peine plastico grande COLR3-42-1","c":"utensilios","u":"PR","ref":"900999271","precio":4400},
+  {"n":"Acople 3 boquillas COLR14-46","c":"utensilios","u":"PR","ref":"900999273","precio":19600},
+  {"n":"Pitillo plastico de colores","c":"utensilios","u":"PR","ref":"401999021","precio":500},
+  {"n":"Estrellas mini en azucar x 24 un","c":"decoracion","u":"R","ref":"1801084003","precio":10500},
+  {"n":"Transportador Wilton para cupcakes x 12","c":"empaques","u":"PR","ref":"1801084012","precio":105000},
+  {"n":"Mesa cupacakes celebracion Wilton x 3 niveles","c":"utensilios","u":"PR","ref":"1801084020","precio":34000},
+  {"n":"Molde acetato chocolate expresiones x 3 Wilton","c":"utensilios","u":"PR","ref":"1801084022","precio":9000},
+  {"n":"Bolsas corazon Wilton x 15 un","c":"empaques","u":"PR","ref":"1801084024","precio":10000},
+  {"n":"Globos estrella adorno x un","c":"decoracion","u":"R","ref":"1801084028","precio":1000},
+  {"n":"Palo para cakepop navideños x 100","c":"empaques","u":"PR","ref":"1801999001","precio":28000},
+  {"n":"Palo para cakepop dorados/plateados x 100","c":"empaques","u":"PR","ref":"1801999002","precio":28000},
+  {"n":"Capacillo paneton 500 gr (13,5*9,5)","c":"empaques","u":"PR","ref":"301999164","precio":1500},
+  {"n":"Cortadores en acero x 6 un (anillo)","c":"utensilios","u":"PR","ref":"1801094058","precio":25000,"nuevo":1},
+  {"n":"Perla dorada n°2","c":"decoracion","u":"R","ref":"70101020","precio":52000},
+  {"n":"Gragea arbol navidad rojo verde nacarado * 500 gr","c":"decoracion","u":"R","ref":"70101026","precio":90000},
+  {"n":"Perla # 6 blanca","c":"decoracion","u":"R","ref":"70101036","precio":45800},
+  {"n":"Separador de yemas Press cod 76222","c":"utensilios","u":"PR","ref":"1801094003","precio":7900},
+  {"n":"Batidor 15 cm acero inoxidable Press cod 76307","c":"utensilios","u":"PR","ref":"1801094005","precio":20000},
+  {"n":"Cuchara de helado Press cod 76801","c":"utensilios","u":"PR","ref":"1801094006","precio":9900},
+  {"n":"Bolero Press cod 86221","c":"utensilios","u":"PR","ref":"1801094016","precio":9800},
+  {"n":"Pala de reposteria desing cod.10245","c":"utensilios","u":"PR","ref":"1801094017","precio":18900},
+  {"n":"Tabla para picar 24.5 x 14.5 x 0.5 cm cod 76700","c":"utensilios","u":"PR","ref":"1801094018","precio":9000},
+  {"n":"Embudos set 3 piezas cod 76819","c":"utensilios","u":"PR","ref":"1801094019","precio":11300},
+  {"n":"Molde de galletas x 6 un acero inox cod 76822","c":"utensilios","u":"PR","ref":"1801094030","precio":18900},
+  {"n":"Cuchara de helado mecanica","c":"utensilios","u":"PR","ref":"1801094032","precio":27000},
+  {"n":"Rallador en acero inx 20cm","c":"utensilios","u":"PR","ref":"1801094035","precio":21900},
+  {"n":"Rallador en acero inx 23cm cod. 76504","c":"utensilios","u":"PR","ref":"1801094037","precio":25900},
+  {"n":"Taza plastica medidora 1 litro","c":"utensilios","u":"PR","ref":"1801094039","precio":15900},
+  {"n":"Pincel de cocina se silicona cod 77425","c":"utensilios","u":"PR","ref":"1801094040","precio":12900},
+  {"n":"Tijera de cocina multiusos cod.86211","c":"utensilios","u":"PR","ref":"1801094042","precio":19900},
+  {"n":"Tabla para picar 40*24*0,9 cod.86703","c":"utensilios","u":"PR","ref":"1801094043","precio":54900},
+  {"n":"Tazas plasticas medidoras set x 5 und cod 76820","c":"utensilios","u":"PR","ref":"1801094047","precio":12900},
+  {"n":"Abrelatas triple uso Press cod.76005","c":"utensilios","u":"PR","ref":"1801094049","precio":8700},
+  {"n":"Sacacorcho cromado Press cod.16102","c":"utensilios","u":"PR","ref":"1801094050","precio":26300},
+  {"n":"Pinza para servir 23 cm enacero","c":"utensilios","u":"PR","ref":"1801094051","precio":10000},
+  {"n":"Bandeja para pizza 32,5*0,9 cm Press cod 77109","c":"utensilios","u":"PR","ref":"1801094064","precio":22000},
+  {"n":"Molde silicona para chocolates 30 und 23,7x 27,2 x 1,5 cm Press cod 77310","c":"utensilios","u":"PR","ref":"1801094065","precio":33000},
+  {"n":"Guante de silicona Press cod 77231","c":"utensilios","u":"PR","ref":"1801094067","precio":14000},
+  {"n":"Bowl mixing 3 lts ref.76828","c":"utensilios","u":"PR","ref":"1801094068","precio":47000},
+  {"n":"Bowl mixing 1,5 lts ref.76307","c":"utensilios","u":"PR","ref":"1801094069","precio":35000},
+  {"n":"Molde silicona aro ondulado 23*6cm morado ref.77305","c":"utensilios","u":"PR","ref":"1801094070","precio":61000},
+  {"n":"Esprinkles","c":"decoracion","u":"R","ref":"701002000","precio":146400},
+  {"n":"Perlas #4 importadas","c":"decoracion","u":"R","ref":"701002001","precio":54000},
+  {"n":"Molde silicona caballito de mar","c":"utensilios","u":"PR","ref":"701002005","precio":19300},
+  {"n":"Rodillo en acero","c":"utensilios","u":"PR","ref":"900999264","precio":22000},
+  {"n":"Edibles de arroz comestibles (figuras)","c":"decoracion","u":"R","ref":"1801999006","precio":5000},
+  {"n":"Edibles de arroz comestibles (fotos)","c":"decoracion","u":"R","ref":"1801999007","precio":10000},
+  {"n":"Edibles de arroz comestibles mini","c":"decoracion","u":"R","ref":"1801999008","precio":500},
+  {"n":"Tapetes texturizados en silicona","c":"utensilios","u":"PR","ref":"1801077001","precio":4500},
+  {"n":"Paleta redonda","c":"utensilios","u":"PR","ref":"1801077003","precio":1800},
+  {"n":"Juego cortador metalico guitarras grandes x 2","c":"utensilios","u":"PR","ref":"1801077006","precio":5500},
+  {"n":"Juego cortador metalico coche baby shower","c":"utensilios","u":"PR","ref":"1801077008","precio":4000},
+  {"n":"Juego cortador metalico hello kitty","c":"utensilios","u":"PR","ref":"1801077009","precio":3500},
+  {"n":"Molde plastico abejitas x 2","c":"utensilios","u":"PR","ref":"1801077015","precio":7200},
+  {"n":"Diamantina tornasol x 50 gr","c":"decoracion","u":"R","ref":"1801077016","precio":22000},
+  {"n":"Rodillo plastico corazones","c":"utensilios","u":"PR","ref":"1801077024","precio":7000},
+  {"n":"Base plastica para tortas de colores 32 cm","c":"empaques","u":"PR","ref":"1801077031","precio":11500},
+  {"n":"Perla N° 4 variada","c":"decoracion","u":"R","ref":"1801077046","precio":25000},
+  {"n":"Pistilos paq x 10","c":"decoracion","u":"R","ref":"1801077052","precio":1500},
+  {"n":"Diamantina de colores x 50 gr","c":"decoracion","u":"R","ref":"1801077053","precio":8000},
+  {"n":"Perla de colores x 50 gr","c":"decoracion","u":"R","ref":"1801077055","precio":4000},
+  {"n":"Sal cristal x 50 kilos","c":"levaduras","u":"P","ref":"1901040003","precio":51000},
+  {"n":"Salvado de trigo x 30 kilos","c":"harinas","u":"PR","ref":"1900020002","precio":75600},
+  {"n":"Salvado de trigo x 22 kg rafael del castillo","c":"harinas","u":"PR","ref":"800085002","precio":38200},
+  {"n":"Salvado de trigo pardo 20 kilos","c":"harinas","u":"PR","ref":"1900020001","precio":68000},
+  {"n":"Uva pasa caja x 10 kg","c":"frutos","u":"PR","ref":"2000999001","precio":121000},
+  {"n":"Blanca nieves set","c":"decoracion","u":"R","ref":"2103999010","precio":4200},
+  {"n":"Payaso pequeño","c":"decoracion","u":"R","ref":"2103999011","precio":400},
+  {"n":"Payaso grande","c":"decoracion","u":"R","ref":"2103999012","precio":600},
+  {"n":"Caja pan navideño 44 cm","c":"empaques","u":"PR","ref":"900067022","precio":2000},
+  {"n":"CMC de alta x 25 kg","c":"levaduras","u":"P","ref":"2103999004","precio":672000},
+  {"n":"Rodillo circular para empanadas ref.2168","c":"utensilios","u":"PR","ref":"104029003","precio":10600},
+  {"n":"Polvo dorado x 30 gramos pote","c":"decoracion","u":"R","ref":"900067037","precio":10000},
+  {"n":"Boquilla nacional pequeña x un","c":"utensilios","u":"PR","ref":"900037038","precio":4900},
+  {"n":"Molde gatos miniatura para fondant y pastillaje","c":"utensilios","u":"PR","ref":"900999129","precio":12000},
+  {"n":"Maquina selladora COLR40-18","c":"utensilios","u":"PR","ref":"900999286"},
+  {"n":"Juego cortador plastico redondo x 5 COLR1-124","c":"utensilios","u":"PR","ref":"900015006","precio":10500},
+  {"n":"Cuchillo porcionador econo","c":"utensilios","u":"PR","ref":"900015007","precio":10000},
+  {"n":"Rodillo acrilico flores COLR3-61","c":"utensilios","u":"PR","ref":"900015022","precio":29000},
+  {"n":"Stickers decorativos 3d multiuso","c":"decoracion","u":"R","ref":"900015030","precio":3400},
+  {"n":"Stickers 3d colores vivos peces","c":"decoracion","u":"R","ref":"900015031","precio":2400},
+  {"n":"Stickers pequeños colores vivos","c":"decoracion","u":"R","ref":"900015032","precio":1500},
+  {"n":"Rodillo cortador de croasant en acero COLR3-13","c":"utensilios","u":"PR","ref":"900015061","precio":54000},
+  {"n":"Cortador marcador varios COLR2-16","c":"utensilios","u":"PR","ref":"900015066","precio":14000},
+  {"n":"Molde caucho trufa naranja x 11 COLR1-71","c":"utensilios","u":"PR","ref":"900015072","precio":9500},
+  {"n":"Espatula plana acero inox 10 x 3.7 b COLR3-28","c":"utensilios","u":"PR","ref":"900015080","precio":19300},
+  {"n":"Molde redondo Urima 2 lb normal","c":"utensilios","u":"PR","ref":"900037022","precio":23000},
+  {"n":"Servilletas redondas N° 10 x 12 1/4 lb","c":"empaques","u":"PR","ref":"900037032","precio":4500},
+  {"n":"Servilletas redondas N° 14 x 12 1lb","c":"empaques","u":"PR","ref":"900037034","precio":7000},
+  {"n":"Servilletas redondas N° 16 x 12 1 1/2","c":"empaques","u":"PR","ref":"900037035","precio":7200},
+  {"n":"Boquilla nacional grande x un","c":"utensilios","u":"PR","ref":"900037037","precio":5800},
+  {"n":"Molde corazon 2 lb","c":"utensilios","u":"PR","ref":"900037073","precio":44000},
+  {"n":"Molde corazon fm 1/4 lb","c":"utensilios","u":"PR","ref":"900037077","precio":17000},
+  {"n":"Molde corazon porcion","c":"utensilios","u":"PR","ref":"900037078","precio":10000},
+  {"n":"Molde redondo Urima 3/4 lb normal","c":"utensilios","u":"PR","ref":"900037084","precio":11500},
+  {"n":"Juego cortador en acero rompecabeza","c":"utensilios","u":"PR","ref":"900999230","precio":50000},
+  {"n":"Cuchillo carne 20 cm","c":"utensilios","u":"PR","ref":"900015092","precio":30000},
+  {"n":"Tijera de cocina","c":"utensilios","u":"PR","ref":"900015093","precio":15000},
+  {"n":"Palos para paleta millar","c":"empaques","u":"PR","ref":"900999001","precio":17500},
+  {"n":"Bolsa decorada 8 x 15 x 50 un","c":"empaques","u":"PR","ref":"900999011","precio":1700},
+  {"n":"Stickers","c":"decoracion","u":"R","ref":"900999015","precio":3600},
+  {"n":"Tornillo nacional grande","c":"decoracion","u":"R","ref":"900999019","precio":4000},
+  {"n":"Molde chocolate acetato","c":"utensilios","u":"PR","ref":"900999020","precio":3500},
+  {"n":"Canchas de futbol","c":"decoracion","u":"R","ref":"900999047","precio":6100},
+  {"n":"Precortado x 10000 un","c":"empaques","u":"PR","ref":"900999048","precio":75000},
+  {"n":"Columna larga (puya)","c":"decoracion","u":"R","ref":"900999055"},
+  {"n":"Columna corta nal x un","c":"decoracion","u":"R","ref":"900999056"},
+  {"n":"Servilletas mia x 200 un","c":"empaques","u":"PR","ref":"900999058","precio":1800},
+  {"n":"Clavo","c":"decoracion","u":"R","ref":"900999060","precio":3500},
+  {"n":"Manga lona # 30","c":"utensilios","u":"PR","ref":"900999066","precio":15000},
+  {"n":"Kit delantal+tapaboca+gorro","c":"utensilios","u":"PR","ref":"900999070","precio":15000},
+  {"n":"Palillos pequeños","c":"empaques","u":"PR","ref":"900999072","precio":700},
+  {"n":"Tarje torta","c":"decoracion","u":"R","ref":"900999073","precio":2500},
+  {"n":"Delantal plastico","c":"utensilios","u":"PR","ref":"900999074","precio":8000},
+  {"n":"Delantal doble","c":"utensilios","u":"PR","ref":"900999075","precio":10000},
+  {"n":"Mallas","c":"utensilios","u":"PR","ref":"900999078","precio":1700},
+  {"n":"Batas de panaderia","c":"utensilios","u":"PR","ref":"900999084","precio":14200},
+  {"n":"Portacapacillos impresos x un","c":"empaques","u":"PR","ref":"900999085","precio":250},
+  {"n":"Cuchillo sierra en acero inox COLR3-20","c":"utensilios","u":"PR","ref":"900999094","precio":20000},
+  {"n":"Espatula en plastico blanca pequeña 24,5cm COLR3-43","c":"utensilios","u":"PR","ref":"900999097","precio":14600},
+  {"n":"Mesa ponque carton","c":"empaques","u":"PR","ref":"900999107","precio":3000},
+  {"n":"Picks de carton","c":"empaques","u":"PR","ref":"900999108","precio":150},
+  {"n":"Espatula plana en acero inox 12x 3.7 cm COLR3-29","c":"utensilios","u":"PR","ref":"900999110","precio":18500},
+  {"n":"Tapabocas blanco paquete x 3 un","c":"utensilios","u":"PR","ref":"900999112","precio":4000},
+  {"n":"Rodillo pastelero # 6 2\" x 20cm f","c":"utensilios","u":"PR","ref":"900999114","precio":64000},
+  {"n":"Bolsa decorada rosas COLR4-24","c":"empaques","u":"PR","ref":"900999121","precio":7000},
+  {"n":"Kit infanti delantal y gorro","c":"utensilios","u":"PR","ref":"900999123","precio":10000},
+  {"n":"Guantes transparentes paqx 100 un","c":"utensilios","u":"PR","ref":"900999125","precio":1800},
+  {"n":"Manga pastelera grande Colorisa x un","c":"utensilios","u":"PR","ref":"900999138","precio":4000},
+  {"n":"Cortador de galleta americano variado x un","c":"utensilios","u":"PR","ref":"900999141","precio":5000},
+  {"n":"Juego cortador estuche corazones x 5 COLR1-120","c":"utensilios","u":"PR","ref":"900999145","precio":15000},
+  {"n":"Juego cortador plastico mariposas x 5 COLR5-13","c":"utensilios","u":"PR","ref":"900999153","precio":12000},
+  {"n":"Push up pops x 3 COLR7-14","c":"empaques","u":"PR","ref":"900999156","precio":8000},
+  {"n":"Juego cortador camafeo rosa x 2 COLR5-36","c":"utensilios","u":"PR","ref":"900999161","precio":6000},
+  {"n":"Juego cortador camafeo rombo x 2 COLR5-37","c":"utensilios","u":"PR","ref":"900999162","precio":6000},
+  {"n":"Blister cortador marcador trebol x 3 COLR2-22","c":"utensilios","u":"PR","ref":"900999170","precio":9000},
+  {"n":"Manga silicona c 21 COLR2-36","c":"utensilios","u":"PR","ref":"900999174","precio":12000},
+  {"n":"Juego cortador plastico estrellas x 5 COLR1-121","c":"utensilios","u":"PR","ref":"900999175","precio":12000},
+  {"n":"Juego cortador plastico cuadrado x 5 COLR1-123","c":"utensilios","u":"PR","ref":"900999176","precio":12000},
+  {"n":"Juego cortador plastico flor x 5 COLR1-122","c":"utensilios","u":"PR","ref":"900999177","precio":12000},
+  {"n":"Envoltura para dulces metalizada x 5 mts","c":"empaques","u":"PR","ref":"900999178","precio":3200},
+  {"n":"Envoltura para dulces transparente x 5 mts","c":"empaques","u":"PR","ref":"900999180","precio":3200},
+  {"n":"Manga pastelera pequeña Colorisa x un","c":"utensilios","u":"PR","ref":"900999181","precio":1600},
+  {"n":"Portacapacillos plateados x un","c":"empaques","u":"PR","ref":"900999184","precio":250},
+  {"n":"Portacapacillos dorados x un","c":"empaques","u":"PR","ref":"900999185","precio":425},
+  {"n":"Blister cortador marc mariposa x 3un COLR2-21","c":"utensilios","u":"PR","ref":"900999188","precio":9000},
+  {"n":"Plantilla para decorar pequeña x 3 COLR4-13","c":"utensilios","u":"PR","ref":"900999190","precio":2000},
+  {"n":"Guante industrial","c":"utensilios","u":"PR","ref":"900999196","precio":16000},
+  {"n":"Gorro tipo pirata y delantal antifluido kit","c":"utensilios","u":"PR","ref":"900999201","precio":19000},
+  {"n":"Palo blanco N° 10 x kilo","c":"empaques","u":"PR","ref":"900999204","precio":18000},
+  {"n":"Palo color N° 10 x kilo","c":"empaques","u":"PR","ref":"900999207","precio":22000},
+  {"n":"Kit delantal+tapaboca+gorro en antifluido","c":"utensilios","u":"PR","ref":"900999208","precio":11500},
+  {"n":"Delantales desechables","c":"utensilios","u":"PR","ref":"900999210","precio":3500},
+  {"n":"Termometro digital cabezal giratorio","c":"utensilios","u":"PR","ref":"900999214","precio":32900},
+  {"n":"Cortadores de corbata","c":"utensilios","u":"PR","ref":"900999215","precio":13500},
+  {"n":"Juego cortadores plasticos bebes","c":"utensilios","u":"PR","ref":"900999216","precio":13500},
+  {"n":"Juego cortadores en acero x 6","c":"utensilios","u":"PR","ref":"900999217","precio":18000},
+  {"n":"Juego cortadores en acero x 4","c":"utensilios","u":"PR","ref":"900999218","precio":12500},
+  {"n":"Juego cortadores en acero x 3","c":"utensilios","u":"PR","ref":"900999219","precio":11000},
+  {"n":"Cortadores en acero x und","c":"utensilios","u":"PR","ref":"900999220","precio":10000},
+  {"n":"Cortadores plasticos redondos doble uso x 10","c":"utensilios","u":"PR","ref":"900999221","precio":9000},
+  {"n":"Cortadores plasticos redondos doble uso x 6","c":"utensilios","u":"PR","ref":"900999222","precio":9000},
+  {"n":"Juego cortador plastico ovalado x 6","c":"utensilios","u":"PR","ref":"900999223","precio":9000},
+  {"n":"Estiletes x 48","c":"utensilios","u":"PR","ref":"900999224","precio":9000},
+  {"n":"Blister cortador marcador copo de nieve x 3","c":"utensilios","u":"PR","ref":"900999225","precio":9000},
+  {"n":"Cortador plastico navidad x 7","c":"utensilios","u":"PR","ref":"900999227","precio":9000},
+  {"n":"Cortador plastico flores x 4","c":"utensilios","u":"PR","ref":"900999228","precio":9000},
+  {"n":"Juego cortador en acero redondo x 10","c":"utensilios","u":"PR","ref":"900999229","precio":25000},
+  {"n":"Juego de cortadores en acero de petalos","c":"utensilios","u":"PR","ref":"900999231","precio":11000},
+  {"n":"Cortador en acero love you","c":"utensilios","u":"PR","ref":"900999232","precio":18500},
+  {"n":"Cortador en acero ABC 6cm *2cm alto","c":"utensilios","u":"PR","ref":"900999233","precio":32000},
+  {"n":"Molde de silicona virgen de silicona","c":"utensilios","u":"PR","ref":"900999234","precio":9000},
+  {"n":"Manga rosada # 45","c":"utensilios","u":"PR","ref":"900999240","precio":8000},
+  {"n":"Manga rosada #50","c":"utensilios","u":"PR","ref":"900999241","precio":9300},
+  {"n":"Manga rosado #60","c":"utensilios","u":"PR","ref":"900999242","precio":11800},
+  {"n":"Conos","c":"empaques","u":"PR","ref":"900999243","precio":4200},
+  {"n":"Molde de silicona notas musicales para fondat","c":"utensilios","u":"PR","ref":"900999245","precio":13000},
+  {"n":"Kit delantal 75*75 gorro de cocina y tapaboca","c":"utensilios","u":"PR","ref":"900999278","precio":10600},
+  {"n":"Lazos rojos pequeños paq x 10un","c":"decoracion","u":"R","ref":"900067017","precio":1500},
+  {"n":"Adorno primera comunion","c":"decoracion","u":"R","ref":"900067018","precio":6500},
+  {"n":"Caja ponque navidad 1/2 lb","c":"empaques","u":"PR","ref":"900067020","precio":1000},
+  {"n":"Polvo dorado x 30 gr","c":"decoracion","u":"R","ref":"900067035","precio":7500},
+  {"n":"Gramera digital Kintech 5000gr","c":"utensilios","u":"PR","ref":"900067040","precio":30000},
+  {"n":"Clavo Ateco x un","c":"decoracion","u":"R","ref":"900067043","precio":3500},
+  {"n":"Vaso 3.5 oz opal Tami - D650300P","c":"empaques","u":"PR","ref":"2100006002","precio":1700},
+  {"n":"Vaso 3 oz espum paq - D690301NS","c":"empaques","u":"PR","ref":"2100006003","precio":2500},
+  {"n":"Contenedor Darnel bamboo 12 oz cj","c":"empaques","u":"PR","ref":"2100006004","precio":154000},
+  {"n":"Tapa contenedor bamboo cja * 20 pq","c":"empaques","u":"PR","ref":"2100006005"},
+  {"n":"Vaso murano 3 oz cristal - D640300","c":"empaques","u":"PR","ref":"2100006006","precio":270500},
+  {"n":"Vaso murano 1 oz cristal cj 2000 un D640100","c":"empaques","u":"PR","ref":"2100006008"},
+  {"n":"Vaso murano 1.5 oz cristal - D6401500","c":"empaques","u":"PR","ref":"2100006009","precio":484000},
+  {"n":"Palo para chuzos","c":"empaques","u":"PR","ref":"900999279","precio":5000},
+  {"n":"Vela numero patica","c":"decoracion","u":"R","ref":"2101048001","precio":2000},
+  {"n":"Vela espiral","c":"decoracion","u":"R","ref":"2101048003"},
+  {"n":"Vela bengala economica pqte x","c":"decoracion","u":"R","ref":"2101048007","precio":13000},
+  {"n":"Vela bengala paquete x 6 candela de colores","c":"decoracion","u":"R","ref":"2101048004","precio":13000},
+  {"n":"Vela premiun dorada","c":"decoracion","u":"R","ref":"2101999006","precio":3400},
+  {"n":"Vela premium plateada","c":"decoracion","u":"R","ref":"2101999007","precio":3400},
+  {"n":"Vela super numero surtidas","c":"decoracion","u":"R","ref":"2101999008","precio":2000},
+  {"n":"Vino de misa Bacaerles x 750 ml","c":"esencias","u":"R","ref":"2102106001","precio":27000},
+  {"n":"Vino Sanson tradicional 750 ml","c":"esencias","u":"R","ref":"2102106003","precio":32000},
+  {"n":"Vino Sanson cofee 750","c":"esencias","u":"R","ref":"2102106004","precio":32000},
+  {"n":"Vino Alteza rosado 750 ml","c":"esencias","u":"R","ref":"2102106006","precio":30000},
+  {"n":"Vino Sazon blanco 750 ml","c":"esencias","u":"R","ref":"2102106007","precio":18800},
+  {"n":"Vino Sazon tinto 750","c":"esencias","u":"R","ref":"2102106008","precio":18700},
+  {"n":"Mezcla de reposteria * litro","c":"esencias","u":"R","ref":"2102106013","precio":12000},
+  {"n":"Mezcla de reposteria * 2 litro","c":"esencias","u":"R","ref":"2102106014","precio":22000},
+  {"n":"Vino Moscatel x 750 cc","c":"esencias","u":"R","ref":"2102034001","precio":120000},
+  {"n":"Vino manzana x 700 cc","c":"esencias","u":"R","ref":"2102034005","precio":112000}
+];
+
+/* ============================================================ */
+(function(){
+  const $ = s => document.querySelector(s);
+  const norm = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+  const catById = Object.fromEntries(CATS.map(c => [c.id, c]));
+  const PRODUCTS = DATA.map((p, i) => ({ ...p, id: "p" + i, k: norm(p.n + " " + catById[p.c].nombre + " " + (p.ref || "")) }));
+  const COP = new Intl.NumberFormat("es-CO", { style:"currency", currency:"COP", maximumFractionDigits:0 });
+  const COPg = new Intl.NumberFormat("es-CO", { style:"currency", currency:"COP", minimumFractionDigits:0, maximumFractionDigits:2 });
+  const priceText = p => !p.precio ? "Precio a consultar" : p.granel ? COPg.format(p.precio) + " por gramo" : COP.format(p.precio);
+  const hasTotal = p => p.precio && !p.granel;
+  const PAGE = 48;
+  PRODUCTS.sort((a, b) => (b.nuevo || 0) - (a.nuevo || 0));
+  const productById = Object.fromEntries(PRODUCTS.map(p => [p.id, p]));
+  const state = { cat:"todos", uso:"todos", q:"", limit: PAGE };
+  const icon = id => '<svg class="ic" aria-hidden="true"><use href="#' + id + '"/></svg>';
+  const waLink = (text) => "https://wa.me/" + NEGOCIO.whatsapp + "?text=" + encodeURIComponent(text);
+
+  /* ---------- Carrito (pedido) ---------- */
+  let cart = {}; // { productId: cantidad }
+  try {
+    const saved = localStorage.getItem("indepan_cart");
+    if (saved) cart = JSON.parse(saved) || {};
+  } catch(e){ cart = {}; }
+
+  function saveCart(){
+    try { localStorage.setItem("indepan_cart", JSON.stringify(cart)); } catch(e){}
+  }
+  function cartTotal(){
+    let total = 0, pending = false;
+    Object.keys(cart).forEach(id => { const p = productById[id]; if (!p) return; if (hasTotal(p)) total += p.precio * cart[id]; else pending = true; });
+    return { total, pending };
+  }
+  function cartCount(){
+    return Object.values(cart).reduce((a,b) => a + b, 0);
+  }
+  function setQty(id, qty){
+    if (qty <= 0) delete cart[id];
+    else cart[id] = qty;
+    saveCart();
+    renderCartBits();
+  }
+  function addToCart(id){
+    cart[id] = (cart[id] || 0) + 1;
+    saveCart();
+    renderCartBits();
+  }
+
+  function renderCartBits(){
+    const n = cartCount();
+    const badge = $("#cartBadge");
+    badge.textContent = n;
+    badge.hidden = n === 0;
+    const fab = $("#cartFab");
+    fab.classList.toggle("show", n > 0);
+    $("#cartFabN").textContent = n;
+    $("#cartCount").textContent = n === 0 ? "0 productos" : (n === 1 ? "1 producto" : n + " productos");
+    const t = cartTotal();
+    $("#cartTotal").textContent = COP.format(t.total);
+    $("#cartTotalNote").hidden = !t.pending;
+    $("#cartSend").disabled = n === 0;
+
+    const wrap = $("#cartItems");
+    const ids = Object.keys(cart);
+    if (!ids.length){
+      wrap.innerHTML = '<div class="cart-empty">' + icon("i-cart") +
+        '<p>Todavía no has agregado productos.<br>Explora el catálogo y dale "Agregar".</p></div>';
+    } else {
+      wrap.innerHTML = ids.map(id => {
+        const p = productById[id];
+        if (!p) return "";
+        const qty = cart[id];
+        const cat = catById[p.c];
+        return '<div class="cart-item" data-id="' + id + '">' +
+          '<div class="icowrap">' + icon(cat.icon) + '</div>' +
+          '<div class="info"><h4>' + p.n + '</h4><div class="pres">' + (hasTotal(p) ? COP.format(p.precio) + " c/u · <strong>" + COP.format(p.precio * qty) + "</strong>" : priceText(p)) + '</div>' +
+          '<div class="row"><div class="qty-stepper">' +
+            '<button type="button" data-step="-1" aria-label="Quitar una unidad">' + icon("i-minus") + '</button>' +
+            '<span>' + qty + '</span>' +
+            '<button type="button" data-step="1" aria-label="Agregar una unidad">' + icon("i-plus") + '</button>' +
+          '</div><button type="button" class="remove" data-remove aria-label="Eliminar producto">' + icon("i-trash") + '</button></div>' +
+          '</div></div>';
+      }).join("");
+    }
+  }
+
+  function fmtDate(){
+    const d = new Date();
+    const s = d.toLocaleDateString("es-CO", { weekday:"long", day:"numeric", month:"long", year:"numeric" });
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  function buildMessage(){
+    const ids = Object.keys(cart);
+    const lines = [];
+    lines.push("Hola, quiero hacer este pedido en Indepan:");
+    lines.push("");
+    ids.forEach(id => {
+      const p = productById[id];
+      if (!p) return;
+      const qty = cart[id];
+      const precio = hasTotal(p) ? " — " + COP.format(p.precio) + " c/u = " + COP.format(p.precio * qty) : " — " + priceText(p);
+      lines.push("• " + qty + " x " + p.n + (p.ref ? " (Ref. " + p.ref + ")" : "") + precio);
+    });
+    lines.push("");
+    const t = cartTotal();
+    lines.push("Total estimado: " + COP.format(t.total) + (t.pending ? " (más productos por cotizar)" : ""));
+    lines.push("");
+    lines.push("Fecha del pedido: " + fmtDate());
+    const notes = $("#cartNotes").value.trim();
+    if (notes) {
+      lines.push("");
+      lines.push("Dirección / notas: " + notes);
+    }
+    return lines.join("\n");
+  }
+
+  function openCart(){
+    $("#cartOverlay").classList.add("open");
+    $("#cartDrawer").classList.add("open");
+    $("#cartDate").textContent = fmtDate();
+    document.body.style.overflow = "hidden";
+  }
+  function closeCart(){
+    $("#cartOverlay").classList.remove("open");
+    $("#cartDrawer").classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  $("#cartBtn").addEventListener("click", openCart);
+  $("#cartFab").addEventListener("click", openCart);
+  $("#cartClose").addEventListener("click", closeCart);
+  $("#cartOverlay").addEventListener("click", closeCart);
+
+  $("#cartItems").addEventListener("click", e => {
+    const item = e.target.closest(".cart-item");
+    if (!item) return;
+    const id = item.dataset.id;
+    const stepBtn = e.target.closest("[data-step]");
+    if (stepBtn){
+      setQty(id, (cart[id] || 0) + parseInt(stepBtn.dataset.step, 10));
+      return;
+    }
+    if (e.target.closest("[data-remove]")){
+      setQty(id, 0);
+    }
+  });
+
+  $("#cartClear").addEventListener("click", () => {
+    cart = {};
+    saveCart();
+    renderCartBits();
+    render();
+  });
+
+  $("#cartSend").addEventListener("click", () => {
+    if (!cartCount()) return;
+    window.open(waLink(buildMessage()), "_blank", "noopener");
+  });
+
+  /* ---------- Catálogo ---------- */
+  function render(){
+    const q = norm(state.q.trim());
+    const base = PRODUCTS.filter(p => (state.uso === "todos" || p.u.includes(state.uso)) && (!q || p.k.includes(q)));
+    const counts = {};
+    base.forEach(p => { counts[p.c] = (counts[p.c] || 0) + 1; if (p.nuevo) counts.nuevos = (counts.nuevos || 0) + 1; });
+    const full = state.cat === "todos" ? base : state.cat === "nuevos" ? base.filter(p => p.nuevo) : base.filter(p => p.c === state.cat);
+    const list = full.slice(0, state.limit);
+
+    const items = [{ id:"todos", nombre:"Todos", icon:"i-layers" }, { id:"nuevos", nombre:"Novedades", icon:"i-star", nuevo:true }].concat(CATS);
+    $("#cats").innerHTML = items.map(c => {
+      const n = c.id === "todos" ? base.length : (counts[c.id] || 0);
+      return '<button type="button" class="cat-btn' + (c.nuevo ? ' cat-new' : '') + '" data-cat="' + c.id + '" aria-pressed="' + (state.cat === c.id) + '">' +
+             icon(c.icon) + '<span>' + c.nombre + '</span><span class="n">' + n + '</span></button>';
+    }).join("");
+
+    document.querySelectorAll("#usos button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.uso === state.uso)));
+
+    const n = full.length;
+    $("#count").innerHTML = (list.length < n ? "Mostrando <strong>" + list.length + "</strong> de " : "Mostrando <strong>") + n + (list.length < n ? "" : "</strong>") + " producto" + (n === 1 ? "" : "s");
+    $("#more").hidden = list.length >= n;
+    $("#more").textContent = "Ver más productos (" + (n - list.length) + " restantes)";
+    $("#clear").hidden = (state.cat === "todos" && state.uso === "todos" && !q);
+
+    if (!n){
+      $("#grid").innerHTML = '<div class="empty"><h3>No encontramos productos con esos filtros</h3>' +
+        '<p>Prueba con otra categoría o escríbenos, quizás lo tenemos.</p>' +
+        '<div class="row"><button type="button" class="btn btn-primary btn-sm" data-clear>Limpiar filtros</button>' +
+        '<a class="btn btn-gold btn-sm" target="_blank" rel="noopener" href="' + waLink("Hola, estoy buscando: " + state.q) + '">Preguntar por WhatsApp</a></div></div>';
+      return;
+    }
+    $("#grid").innerHTML = list.map(p => {
+      const cat = catById[p.c];
+      const tags = (p.u.includes("P") ? '<span class="tag">Panadería</span>' : "") + (p.u.includes("R") ? '<span class="tag">Repostería</span>' : "");
+      const qty = cart[p.id] || 0;
+      const actions = qty > 0
+        ? '<div class="qty-stepper"><button type="button" data-step="-1" aria-label="Quitar una unidad">' + icon("i-minus") + '</button>' +
+          '<span>' + qty + '</span><button type="button" data-step="1" aria-label="Agregar una unidad">' + icon("i-plus") + '</button></div>'
+        : '<button type="button" class="btn btn-primary btn-sm" data-add>' + icon("i-plus") + 'Agregar</button>';
+      return '<article class="card' + (p.nuevo ? ' is-new' : '') + '" data-id="' + p.id + '"><div class="tile">' + (p.nuevo ? '<span class="new-badge">' + icon("i-star") + 'Nuevo</span>' : '') + icon(cat.icon) + '</div>' +
+        '<div class="card-body"><div class="cat-label">' + cat.nombre + '</div><h3>' + p.n + '</h3>' +
+        '<div class="price' + (p.precio ? '' : ' ask') + '">' + (p.granel && p.precio ? COPg.format(p.precio) + ' <small>por gramo</small>' : priceText(p)) + '</div>' +
+        '<div class="tags">' + tags + '</div>' +
+        '<button type="button" class="card-toggle" data-toggle>Ver detalles</button>' +
+        '<div class="card-detail" data-detail><dl>' +
+          (p.ref ? '<dt>Referencia</dt><dd>' + p.ref + '</dd>' : '') +
+          '<dt>Uso</dt><dd>' + (p.u === "PR" ? "Panadería y repostería" : p.u === "P" ? "Panadería" : "Repostería") + '</dd>' +
+        '</dl>' + (p.detail ? '<p style="margin-top:8px">' + p.detail + '</p>' : '') + '</div>' +
+        '</div>' +
+        '<div class="card-actions">' + actions + '</div></article>';
+    }).join("");
+  }
+
+  function reset(){ state.cat = "todos"; state.uso = "todos"; state.q = ""; state.limit = PAGE; $("#q").value = ""; render(); }
+  $("#more").addEventListener("click", () => { state.limit += PAGE; render(); });
+
+  $("#cats").addEventListener("click", e => { const b = e.target.closest("[data-cat]"); if (b){ state.cat = b.dataset.cat; state.limit = PAGE; render(); } });
+  $("#usos").addEventListener("click", e => { const b = e.target.closest("[data-uso]"); if (b){ state.uso = b.dataset.uso; state.limit = PAGE; render(); } });
+  $("#q").addEventListener("input", e => { state.q = e.target.value; state.limit = PAGE; render(); });
+  $("#clear").addEventListener("click", reset);
+  $("#grid").addEventListener("click", e => {
+    if (e.target.closest("[data-clear]")) { reset(); return; }
+    const card = e.target.closest(".card");
+    if (!card) return;
+    const id = card.dataset.id;
+
+    if (e.target.closest("[data-toggle]")){
+      const detail = card.querySelector("[data-detail]");
+      const btn = card.querySelector("[data-toggle]");
+      const open = detail.classList.toggle("open");
+      btn.textContent = open ? "Ocultar detalles" : "Ver detalles";
+      return;
+    }
+    if (e.target.closest("[data-add]")){
+      addToCart(id);
+      render();
+      return;
+    }
+    const stepBtn = e.target.closest("[data-step]");
+    if (stepBtn){
+      setQty(id, (cart[id] || 0) + parseInt(stepBtn.dataset.step, 10));
+      render();
+    }
+  });
+
+  document.querySelectorAll("[data-go-cat]").forEach(b => b.addEventListener("click", () => {
+    state.cat = b.dataset.goCat; state.uso = "todos"; state.q = ""; state.limit = PAGE; $("#q").value = ""; render();
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    $("#catalogo").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+  }));
+
+  document.querySelectorAll("[data-go-q]").forEach(b => b.addEventListener("click", () => {
+    state.cat = "todos"; state.uso = "todos"; state.q = b.dataset.goQ; state.limit = PAGE; $("#q").value = state.q; render();
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    $("#catalogo").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+  }));
+
+  const menuBtn = $("#menuBtn"), nav = $("#nav");
+  function setMenu(open){
+    nav.classList.toggle("open", open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    menuBtn.innerHTML = icon(open ? "i-close" : "i-menu");
+  }
+  menuBtn.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
+  nav.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+
+  document.querySelectorAll("[data-wa]").forEach(a => a.href = waLink("Hola, quisiera información sobre sus productos."));
+  $("#c-wa").textContent = NEGOCIO.whatsappVisible;
+  $("#c-dir").textContent = NEGOCIO.direccion;
+  $("#c-hor").innerHTML = NEGOCIO.horario.join("<br>");
+  $("#c-ig").href = "https://www.instagram.com/" + NEGOCIO.instagram + "/";
+  $("#c-ig-t").textContent = "@" + NEGOCIO.instagram;
+  $("#year").textContent = new Date().getFullYear();
+
+  renderCartBits();
+  render();
+})();
+
+/* ================= CARRUSEL DE NOVEDADES ================= */
+(function () {
+  document.querySelectorAll('.ip-slider').forEach(function (slider) {
+    var track = slider.querySelector('.ip-track');
+    var slides = slider.querySelectorAll('.ip-slide');
+    var dotsBox = slider.querySelector('.ip-dots');
+    var total = slides.length, actual = 0, timer = null;
+    var INTERVALO = 6000; // milisegundos entre slides
+    var sinMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var dots = Array.prototype.map.call(slides, function (_, i) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'ip-dot';
+      b.setAttribute('aria-label', 'Ir a la diapositiva ' + (i + 1));
+      b.addEventListener('click', function () { ir(i); reiniciar(); });
+      dotsBox.appendChild(b);
+      return b;
+    });
+
+    function ir(i) {
+      actual = (i + total) % total;
+      track.style.transform = 'translateX(' + (-100 * actual) + '%)';
+      slides.forEach(function (s, j) {
+        s.setAttribute('aria-hidden', j !== actual);
+        s.querySelectorAll('a,button').forEach(function (el) { el.tabIndex = j === actual ? 0 : -1; });
+      });
+      dots.forEach(function (d, j) { d.setAttribute('aria-current', j === actual); });
+    }
+    function iniciar() { if (!sinMovimiento && !timer) timer = setInterval(function () { ir(actual + 1); }, INTERVALO); }
+    function detener() { clearInterval(timer); timer = null; }
+    function reiniciar() { detener(); iniciar(); }
+
+    slider.querySelector('.ip-prev').addEventListener('click', function () { ir(actual - 1); reiniciar(); });
+    slider.querySelector('.ip-next').addEventListener('click', function () { ir(actual + 1); reiniciar(); });
+
+    // Pausa al pasar el mouse o al enfocar con teclado
+    slider.addEventListener('mouseenter', detener);
+    slider.addEventListener('mouseleave', iniciar);
+    slider.addEventListener('focusin', detener);
+    slider.addEventListener('focusout', iniciar);
+
+    // Flechas del teclado
+    slider.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { ir(actual - 1); }
+      if (e.key === 'ArrowRight') { ir(actual + 1); }
+    });
+
+    // Deslizar con el dedo en celular
+    var x0 = null;
+    track.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; detener(); }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) ir(actual + (dx < 0 ? 1 : -1));
+      x0 = null; iniciar();
+    });
+
+    ir(0); iniciar();
+  });
+})();
+
+</script>
+</body>
+</html>
